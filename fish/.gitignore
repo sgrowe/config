@@ -15,3 +15,4 @@
 !functions/ahead_behind.fish
 !functions/adyen_test_card.fish
 !functions/recent_branches.fish
+!functions/setup_symlinks.fish
