@@ -1,0 +1,17 @@
+*
+
+!.gitignore
+
+!config.fish
+
+# Fisher
+# https://github.com/jorgebucaran/fisher
+!fish_plugins
+
+# Functions whitelist
+!functions
+!functions/new_ticket.fish
+!functions/rm_node_modules.fish
+!functions/ahead_behind.fish
+!functions/adyen_test_card.fish
+!functions/recent_branches.fish
