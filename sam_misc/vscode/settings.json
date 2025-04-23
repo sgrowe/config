@@ -1,0 +1,109 @@
+{
+  // Auto formatting
+  "editor.formatOnSave": true,
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+
+  // Terminal
+  "terminal.integrated.env.osx": {
+    "EDIT": "code"
+  },
+  "terminal.integrated.scrollback": 2000,
+  "terminal.integrated.macOptionIsMeta": true,
+  "terminal.external.osxExec": "Ghostty.app",
+
+  // Theme
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.preferredDarkColorTheme": "Default Dark Modern",
+  "workbench.colorCustomizations": {
+    "[Solarized Light]": {
+      // https://github.com/microsoft/vscode/blob/main/extensions/theme-solarized-light/themes/solarized-light-color-theme.json
+      "minimap.background": "#FDF6E388"
+    },
+    "[Default Dark Modern]": {
+      // https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_modern.json
+      "minimap.background": "#1F1F1F44"
+    }
+  },
+
+  // Font
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+
+  // Font sizes
+  "terminal.integrated.fontSize": 11,
+  "scm.inputFontSize": 12,
+  "terminal.integrated.lineHeight": 1.1,
+  "editor.fontSize": 11.5,
+
+  // Behaviour
+  "workbench.startupEditor": "none",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+
+  // Analytics
+  "telemetry.telemetryLevel": "off",
+
+  // Formatters
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Diffs
+  "diffEditor.maxComputationTime": 0,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": false,
+
+  // Editor
+  "editor.minimap.renderCharacters": false,
+  "editor.glyphMargin": false,
+  "editor.rulers": [
+    {
+      "column": 120
+    }
+  ],
+
+  "workbench.editorAssociations": {
+    // Do not use that annoying git lens editor
+    "git-rebase-todo": "default"
+  }
+}
