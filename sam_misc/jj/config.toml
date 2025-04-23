@@ -1,0 +1,20 @@
+[user]
+name = "Sam Rowe"
+email = "sgrowe@live.co.uk"
+
+[ui]
+default-command = "status"
+pager = "delta"
+
+[ui.diff]
+format = "git"
+
+[template-aliases]
+# Relative timestamp rendered as "x days/hours/seconds ago"
+'format_timestamp(timestamp)' = 'timestamp.ago()'
+
+# Name, fixed width
+# 'format_short_signature(signature)' = 'truncate_end(15, pad_end(15, signature.name()))'
+
+# Just the first part of the email address, fixed width
+'format_short_signature(signature)' = 'truncate_end(12, pad_end(12, signature.email().local()))'
