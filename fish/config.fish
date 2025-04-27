@@ -38,18 +38,44 @@ abbr js               jj status
 abbr jn               jj new
 abbr jd               jj diff --ignore-space-change
 abbr jds              jj describe
-abbr jm --set-cursor "jj describe -m \"%\""
 abbr jc --set-cursor "jj commit -m \"%\""
 abbr jl               jj log
+abbr jll              jj log --limit 5
 abbr jls              jj log --summary
 abbr je               jj edit
 abbr jsq              jj squash
+abbr ja               jj absorb
 abbr jsh              jj show
 abbr jg               jj git
 abbr jgf              jj git fetch
 
+
+# `jm` becomes   jj describe -r @ -m ""
+# `jm-` becomes  jj describe -r @- -m ""
+# `jm--` becomes jj describe -r @-- -m ""
+# `jmxy` becomes jj describe -r xy -m ""
+function _jj_describe_abbr
+    set -f fish_trace 1
+
+    set -f rev (string sub --start 3 $argv[1])
+
+    if test -n (string match --regex "^[-+]*\$" -- $rev || echo "")
+      set -f rev "@$rev"
+    end
+
+    if test -z $rev
+      set -f rev "@"
+    end
+
+    echo "jj describe -r $rev -m \"%\""
+end
+abbr jj_describe_rev  --regex "jm.*" --set-cursor  --function _jj_describe_abbr
+
+
+abbr jj_git           --command jj --regex "g"               -- "git"
 abbr jj_msg           --command jj --regex "-m" --set-cursor -- "--message \"%\""
 abbr jj_no_edit       --command jj --regex "-ne"             -- "--no-edit"
+abbr jj_limit         --command jj --regex "-l"              -- "--limit 5"
 abbr jj_no_whitespace --command jj --regex "-w"              -- "--ignore-all-space"
 
 abbr mn "jj git fetch && jj rebase -d main"
@@ -194,7 +220,8 @@ abbr cu cursor
 
 # Aider
 abbr a aider
-abbr awd "aider (git status -s | awk '{print \$NF}')" # Start aider with edited files loaded
+abbr awd "aider (jj diff --name-only)" # Start aider with edited files loaded
+# abbr awd "aider (git status -s | awk '{print \$NF}')" # Start aider with edited files loaded
 abbr aw aider --watch-files
 abbr aider_read --command aider --regex r -- --read
 abbr aider_edit --command aider --regex e -- --edit
