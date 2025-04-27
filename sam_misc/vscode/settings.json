@@ -105,5 +105,8 @@
   "workbench.editorAssociations": {
     // Do not use that annoying git lens editor
     "git-rebase-todo": "default"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
