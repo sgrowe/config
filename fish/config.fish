@@ -238,6 +238,10 @@ set -x AIDER_NOTIFICATIONS true
 abbr as aider-script
 
 
+# auto_describe function
+abbr at auto_describe
+
+
 # iOS simulator
 # Open url in already booted simulator
 abbr so "xcrun simctl openurl booted (pbpaste)"
