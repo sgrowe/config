@@ -79,6 +79,7 @@ abbr jj_limit         --command jj --regex "-l"              -- "--limit 5"
 abbr jj_no_whitespace --command jj --regex "-w"              -- "--ignore-all-space"
 
 abbr mn "jj git fetch && jj rebase -d main"
+abbr ms "jj git fetch && jj rebase -d master"
 
 
 # git
@@ -196,8 +197,8 @@ abbr yw yarn workspace
 abbr b brew
 
 
-# mise
-abbr m mise
+# make
+abbr m make
 
 
 # Next.js
@@ -260,3 +261,18 @@ abbr xcderiv cd ~/Library/Developer/Xcode/DerivedData
 
 # zoxide: https://github.com/ajeetdsouza/zoxide
 zoxide init fish | source
+
+
+# ASDF configuration code
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
