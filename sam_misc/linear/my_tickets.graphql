@@ -1,0 +1,20 @@
+query Me {
+  viewer {
+    id
+    name
+    email
+    assignedIssues {
+      nodes {
+        id
+        number
+        title
+        state {
+          id
+          name
+          description
+          type
+        }
+      }
+    }
+  }
+}

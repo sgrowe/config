@@ -1,0 +1,2 @@
+schema: "https://api.linear.app/graphql"
+documents: "./**/*.{graphql,js,ts,jsx,tsx}"

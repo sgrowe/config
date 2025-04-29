@@ -17,3 +17,5 @@
 !functions/recent_branches.fish
 !functions/setup_symlinks.fish
 !functions/auto_describe.fish
+!functions/linear_api.fish
+!functions/watch.fish
