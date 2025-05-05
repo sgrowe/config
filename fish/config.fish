@@ -43,11 +43,12 @@ abbr jl               jj log
 abbr jll              jj log --limit 5
 abbr jls              jj log --summary
 abbr je               jj edit
-abbr jsq              jj squash
 abbr ja               jj absorb
 abbr jsh              jj show
 abbr jg               jj git
 abbr jgf              jj git fetch
+abbr jsq              jj squash
+abbr zsq             "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
 
 
 # `jm` becomes   jj describe -r @ -m ""
@@ -80,6 +81,17 @@ abbr jj_no_whitespace --command jj --regex "-w"              -- "--ignore-all-sp
 
 abbr mn "jj git fetch && jj rebase -d main"
 abbr ms "jj git fetch && jj rebase -d master"
+
+
+# Expands `^` to the last argument of the most recent command
+# e.g.
+# $ ls path/to/x
+# ...
+# $ cd ^  ==>  cd path/to/x
+function _last_arg_of_most_recent_command
+    echo $history[1] | string split ' ' | tail -n 1
+end
+abbr --position anywhere ^ --function _last_arg_of_most_recent_command
 
 
 # git
