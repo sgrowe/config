@@ -36,16 +36,17 @@ abbr fconf "$EDIT ~/.config/fish"
 abbr j                jj
 abbr js               jj status
 abbr jn               jj new
-abbr jd               jj diff --ignore-space-change
-abbr jds              jj describe
+abbr jd               jj diff --ignore-space-change -r @
+abbr jds              jj describe -r @
 abbr jc --set-cursor "jj commit -m \"%\""
 abbr jl               jj log
 abbr jll              jj log --limit 5
 abbr jls              jj log --summary
 abbr je               jj edit
 abbr ja               jj absorb
-abbr jsh              jj show
+abbr jsh              jj show -r @
 abbr jg               jj git
+abbr jgp              jj git push
 abbr jgf              jj git fetch
 abbr jsq              jj squash
 abbr zsq             "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
