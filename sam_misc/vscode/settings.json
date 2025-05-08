@@ -108,5 +108,8 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "makefile.configureOnOpen": false,
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "security.workspace.trust.untrustedFiles": "open"
 }
