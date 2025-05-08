@@ -8,7 +8,7 @@ if status is-interactive
 
     # Override `$EDIT` in each editor in order to use itself
     if not set -q EDIT
-        set -x EDIT "code"
+        set -x EDIT "zed"
     end
 
     set -x EDITOR "$EDIT --wait"
@@ -81,7 +81,7 @@ abbr jj_limit         --command jj --regex "-l"              -- "--limit 5"
 abbr jj_no_whitespace --command jj --regex "-w"              -- "--ignore-all-space"
 
 abbr mn "jj git fetch && jj rebase -d main"
-abbr ms "jj git fetch && jj rebase -d master"
+abbr ma "jj git fetch && jj rebase -d master"
 
 
 # Expands `^` to the last argument of the most recent command
@@ -206,6 +206,13 @@ abbr yad yarn add --dev
 abbr yw yarn workspace
 
 
+# pnpm
+abbr p  pnpm
+abbr pr pnpm run
+abbr pe pnpm exec
+abbr pi pnpm install
+
+
 # brew
 abbr b brew
 
@@ -289,3 +296,6 @@ if not contains $_asdf_shims $PATH
     set -gx --prepend PATH $_asdf_shims
 end
 set --erase _asdf_shims
+
+# Add Google Cloud SDK to PATH
+if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end
