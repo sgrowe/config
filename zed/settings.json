@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim_mode": false,
   "edit_predictions": {
     "mode": "eager",
     "copilot": {
@@ -33,7 +34,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Hex Solarized Light Theme",
     "dark": "Catppuccin Macchiato"
   },
   "code_actions_on_format": {
