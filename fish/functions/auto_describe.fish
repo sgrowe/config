@@ -2,7 +2,7 @@ function auto_describe
     # Use revision given in first argument, or default to `@`
     set -f rev $argv[1]
     if test -z "$rev"
-        set -f rev "@"
+        set -f rev "@-"
     end
 
     # Get the full change ID in case it changes. e.g. working commit `@` moves

@@ -45,6 +45,7 @@ abbr jls              jj log --summary
 abbr je               jj edit
 abbr ja               jj absorb
 abbr jsh              jj show -r @
+abbr jb               jj bookmark
 abbr jg               jj git
 abbr jgp              jj git push
 abbr jgf              jj git fetch
@@ -66,7 +67,7 @@ function _jj_describe_abbr
     end
 
     if test -z $rev
-      set -f rev "@"
+      set -f rev "@-"
     end
 
     echo "jj describe -r $rev -m \"%\""
