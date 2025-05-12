@@ -4,7 +4,6 @@ function setup_symlinks
 
     set -l vsc_settings "$HOME/Library/Application Support/Code/User/settings.json"
     set -l vsc_keymap "$HOME/Library/Application Support/Code/User/keybindings.json"
-    set -l jj_config "$HOME/Library/Application Support/jj/config.toml"
 
     # VS Code
     if not test -e $vsc_settings
@@ -12,10 +11,5 @@ function setup_symlinks
     end
     if not test -e $vsc_keymap
         ln -s ~/.config/sam_misc/vscode/keybindings.json $vsc_keymap
-    end
-
-    # Jujutsu
-    if not test -e $jj_config
-        ln -s ~/.config/sam_misc/jj/config.toml $jj_config
     end
 end
