@@ -17,8 +17,9 @@
     "enabled_in_text_threads": false
   },
   "agent": {
+    "dock": "left",
     "default_model": {
-      "provider": "anthropic",
+      "provider": "zed.dev",
       "model": "claude-3-7-sonnet-latest"
     },
     "version": "2",
