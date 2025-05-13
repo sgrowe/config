@@ -18,3 +18,8 @@ format = "git"
 
 # Just the first part of the email address, fixed width
 'format_short_signature(signature)' = 'truncate_end(12, pad_end(12, signature.email().local()))'
+
+
+[fix.tools.fish]
+command = ["fish", "--command=fish_indent"]
+patterns = ["glob:'**/*.fish'"]
