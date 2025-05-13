@@ -35,6 +35,7 @@ abbr fconf "$EDIT ~/.config/fish"
 # JJ
 abbr j                jj
 abbr js               jj status
+abbr jsp              jj split
 abbr jn               jj new
 abbr jd               jj diff --ignore-space-change -r @
 abbr jds              jj describe -r @
@@ -46,6 +47,7 @@ abbr je               jj edit
 abbr ja               jj absorb
 abbr jsh              jj show -r @
 abbr jb               jj bookmark
+abbr jr               jj rebase
 abbr jg               jj git
 abbr jgp              jj git push
 abbr jgf              jj git fetch
