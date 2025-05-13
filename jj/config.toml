@@ -23,3 +23,8 @@ format = "git"
 [fix.tools.fish]
 command = ["fish", "--command=fish_indent"]
 patterns = ["glob:'**/*.fish'"]
+
+
+[fix.tools.app_client_rescript]
+command = ["pnpm", "exec", "rescript", "format", "-stdin", ".res"]
+patterns = ["glob:'app/client/**/*.res'"]
