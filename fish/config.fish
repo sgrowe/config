@@ -33,26 +33,28 @@ abbr fconf "$EDIT ~/.config/fish"
 
 
 # JJ
-abbr j                jj
-abbr js               jj status
-abbr jsp              jj split
-abbr jn               jj new
-abbr jd               jj diff --ignore-space-change -r @
-abbr jds              jj describe -r @
-abbr jc --set-cursor "jj commit -m \"%\""
-abbr jl               jj log
-abbr jll              jj log --limit 5
-abbr jls              jj log --summary
-abbr je               jj edit
-abbr ja               jj absorb
-abbr jsh              jj show -r @
-abbr jb               jj bookmark
-abbr jr               jj rebase
-abbr jg               jj git
-abbr jgp              jj git push
-abbr jgf              jj git fetch
-abbr jsq              jj squash
-abbr zsq             "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
+abbr j                 jj
+abbr js                jj status
+abbr jsp               jj split
+abbr jn                jj new
+abbr jd  --set-cursor "jj diff --ignore-space-change -r @%"
+abbr jds               jj describe
+abbr jc  --set-cursor "jj commit -m \"%\""
+abbr jl                jj log
+abbr jll               jj log --limit 5
+abbr jls               jj log --summary
+abbr je                jj edit
+abbr ja                jj absorb
+abbr jsh --set-cursor "jj show -r @%"
+abbr jb                jj bookmark
+abbr jbc               jj bookmark create
+abbr jbm               jj bookmark move
+abbr jr                jj rebase
+abbr jg                jj git
+abbr jgp               jj git push
+abbr jgf               jj git fetch
+abbr jsq               jj squash
+abbr zsq              "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
 
 
 # `jm` becomes   jj describe -r @ -m ""
