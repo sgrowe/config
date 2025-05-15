@@ -4,7 +4,9 @@
 [
   {
     "label": "Open SCSS file",
-    "command": "zed $(string replace -r '\\.\\w+$' '.scss' \"$ZED_FILE\")"
+    "command": "zed $(string replace -r '\\.\\w+$' '.scss' \"$ZED_FILE\")",
+    "reveal": "never",
+    "hide": "always"
   },
   {
     "label": "Example task",
