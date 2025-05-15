@@ -17,6 +17,7 @@
     "enabled_in_text_threads": false
   },
   "agent": {
+    "always_allow_tool_actions": true,
     "dock": "left",
     "default_model": {
       "provider": "zed.dev",
