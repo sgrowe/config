@@ -39,7 +39,7 @@ abbr jsp               jj split
 abbr jn                jj new
 abbr jd  --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jds               jj describe
-abbr jc  --set-cursor "jj commit -m \"%\""
+abbr jc  --set-cursor "jj commit -m '%'"
 abbr jl                jj log
 abbr jll               jj log --limit 5
 abbr jls               jj log --summary
@@ -74,13 +74,13 @@ function _jj_describe_abbr
       set -f rev "@-"
     end
 
-    echo "jj describe -r $rev -m \"%\""
+    echo "jj describe -r $rev -m '%'"
 end
 abbr jj_describe_rev  --regex "jm.*" --set-cursor  --function _jj_describe_abbr
 
 
 abbr jj_git           --command jj --regex "g"               -- "git"
-abbr jj_msg           --command jj --regex "-m" --set-cursor -- "--message \"%\""
+abbr jj_msg           --command jj --regex "-m" --set-cursor -- "--message '%'"
 abbr jj_no_edit       --command jj --regex "-ne"             -- "--no-edit"
 abbr jj_limit         --command jj --regex "-l"              -- "--limit 5"
 abbr jj_no_whitespace --command jj --regex "-w"              -- "--ignore-all-space"
