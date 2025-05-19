@@ -12,6 +12,9 @@ format = "git"
 [git]
 push-new-bookmarks = true
 
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+
 [template-aliases]
 # Relative timestamp rendered as "x days/hours/seconds ago"
 'format_timestamp(timestamp)' = 'timestamp.ago()'
