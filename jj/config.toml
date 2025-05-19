@@ -9,6 +9,9 @@ pager = "delta"
 [ui.diff]
 format = "git"
 
+[git]
+push-new-bookmarks = true
+
 [template-aliases]
 # Relative timestamp rendered as "x days/hours/seconds ago"
 'format_timestamp(timestamp)' = 'timestamp.ago()'
