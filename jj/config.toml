@@ -25,6 +25,9 @@ push-new-bookmarks = true
 # Just the first part of the email address, fixed width
 'format_short_signature(signature)' = 'truncate_end(12, pad_end(12, signature.email().local()))'
 
+# Don't bother showing the full change ID in the logs
+'format_short_change_id(id)' = 'pad_end(6, id.shortest())'
+
 
 [fix.tools.fish]
 command = ["fish", "--command=fish_indent"]
