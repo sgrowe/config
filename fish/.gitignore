@@ -19,3 +19,4 @@
 !functions/auto_describe.fish
 !functions/linear_api.fish
 !functions/watch.fish
+!functions/crawl_doc_page.fish
