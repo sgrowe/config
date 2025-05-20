@@ -1,20 +1,57 @@
-query Me {
-  viewer {
-    id
-    name
-    email
-    assignedIssues {
-      nodes {
-        id
-        number
-        title
-        state {
-          id
-          name
-          description
-          type
+query Me($teamIdStr: String!, $teamId: ID!) {
+    workflowStates(filter: { team: { id: { eq: $teamId } } }) {
+        nodes {
+            id
+            name
+            archivedAt
+            type
+            position
+            color
+            team {
+                id
+                name
+            }
+            inheritedFrom {
+                id
+                name
+            }
         }
-      }
     }
-  }
+
+    team(id: $teamIdStr) {
+        name
+
+        # issues {
+        #     nodes {
+        #         id
+        #         number
+        #         title
+        #         state {
+        #             id
+        #             name
+        #             description
+        #             type
+        #         }
+        #     }
+        # }
+    }
+    viewer {
+        id
+        name
+    }
+    #     email
+    #     assignedIssues {
+    #         nodes {
+    #             id
+    #             number
+    #             title
+    #             state {
+    #                 id
+    #                 name
+    #                 description
+    #                 type
+    #             }
+    #         }
+    #     }
+    # }
 }

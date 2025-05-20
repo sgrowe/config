@@ -1,7 +1,7 @@
 function linear_api
-    set -f query "$(cat sam_misc/linear/my_tickets.graphql | jq -sR)"
+    set -f query "$(cat ~/.config/sam_misc/linear/$argv[1].graphql | jq -sR)"
 
-    set -f data "$(echo $query | jq '{ query: . }')"
+    set -f data "$(echo $query | jq '{ query: ., variables: { teamId: env.LINEAR_TEAM_ID, teamIdStr: env.LINEAR_TEAM_ID } }')"
 
     curl \
         -X POST \
