@@ -20,3 +20,4 @@
 !functions/linear_api.fish
 !functions/watch.fish
 !functions/crawl_doc_page.fish
+!functions/swap_to_from_scss.fish
