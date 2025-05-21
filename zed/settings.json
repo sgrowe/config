@@ -17,6 +17,7 @@
     "enabled_in_text_threads": false
   },
   "agent": {
+    "default_profile": "write",
     "always_allow_tool_actions": true,
     "dock": "right",
     "default_model": {
@@ -36,10 +37,9 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Hex Solarized Light Theme",
+    "light": "One Light",
     "dark": "Catppuccin Macchiato"
   },
-  "code_actions_on_format": {
-    "source.organizeImports": true
-  }
+  "use_smartcase_search": true,
+  "ensure_final_newline_on_save": true
 }
