@@ -16,6 +16,13 @@ if status is-interactive
     # fzf: https://junegunn.github.io/fzf/shell-integration/
     fzf --fish | source
 
+    # direnv
+    direnv hook fish | source
+
+
+    # zoxide: https://github.com/ajeetdsouza/zoxide
+    zoxide init fish | source
+
     # Prompt
     set -g lucid_prompt_symbol_error "!"
 end
@@ -283,10 +290,6 @@ abbr andr_paste adb shell input text
 
 # Xcode
 abbr xcderiv cd ~/Library/Developer/Xcode/DerivedData
-
-
-# zoxide: https://github.com/ajeetdsouza/zoxide
-zoxide init fish | source
 
 
 # ASDF configuration code
