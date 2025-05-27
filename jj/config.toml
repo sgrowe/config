@@ -13,7 +13,7 @@ format = "git"
 push-new-bookmarks = true
 
 [revset-aliases]
-'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+'closest_bookmark(to)' = 'heads(::to & bookmarks()) & ~trunk()'
 
 [template-aliases]
 # Relative timestamp rendered as "x days/hours/seconds ago"
