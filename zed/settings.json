@@ -7,7 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "vim_mode": false,
   "edit_predictions": {
     "mode": "eager",
     "copilot": {
@@ -33,6 +32,10 @@
     "env": {
       "EDIT": "zed"
     }
+  },
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true
   },
   "theme": {
     "mode": "system",
