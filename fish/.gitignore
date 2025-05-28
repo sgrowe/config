@@ -19,5 +19,6 @@
 !functions/auto_describe.fish
 !functions/linear_api.fish
 !functions/watch.fish
+!functions/hot.fish
 !functions/crawl_doc_page.fish
 !functions/swap_to_from_scss.fish
