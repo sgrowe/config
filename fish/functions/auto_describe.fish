@@ -12,10 +12,11 @@ function auto_describe
 
     set -f diff "$(jj diff --ignore-space-change -r $change_id | cat)"
 
-    set -f desc "$(llm -s "Provide a concise, one line commit message for this diff. Be specific. Respond with the commit message only." "$diff")"
+    set -f desc "$(mlx_lm.generate --verbose false --model mlx-community/Qwen3-0.6B-8bit --max-tokens 100000 --system-prompt "Provide a concise, one line commit message for this diff. Be specific. Respond with the commit message only." --prompt "$diff")"
 
-    echo "Description: $desc"
-    echo
+    printf "\n\n%s\n\n" "$desc"
+
+    set -f desc (string replace -r '<think>[\s\S]+?</think>\s*' '' "$desc" | string trim)
 
     set -l fish_trace 1
 

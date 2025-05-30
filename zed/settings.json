@@ -39,7 +39,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "One Light",
+    "light": "Hex Solarized Light Theme",
     "dark": "Catppuccin Macchiato"
   },
   "use_smartcase_search": true,
