@@ -1,7 +1,7 @@
 {
   "Log to console": {
     "prefix": "cl",
-    "body": ["Js.logMany([\"$0\", $0->JSON.stringifyAny->Option.getUnsafe])"],
+    "body": ["Js.logMany([\"$0\", $0->Obj.magic])"],
     "description": "console log"
   }
 }
