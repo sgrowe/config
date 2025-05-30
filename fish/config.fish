@@ -195,6 +195,7 @@ abbr lh  eza --all --long --total-size
 abbr c cargo
 abbr ca cargo add
 abbr cad cargo add --dev
+abbr cb cargo build
 abbr ct cargo test
 abbr cir cargo insta review
 abbr cit cargo insta test --unreferenced delete
