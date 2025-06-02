@@ -31,6 +31,9 @@
     "font_size": 11,
     "env": {
       "EDIT": "zed"
+    },
+    "toolbar": {
+      "breadcrumbs": false
     }
   },
   "vim_mode": true,
