@@ -19,9 +19,11 @@ if status is-interactive
     # direnv
     direnv hook fish | source
 
-
     # zoxide: https://github.com/ajeetdsouza/zoxide
     zoxide init fish | source
+
+    # k8s
+    kubectl completion fish | source
 
     # Prompt
     set -g lucid_prompt_symbol_error "!"
@@ -196,6 +198,7 @@ abbr c cargo
 abbr ca cargo add
 abbr cad cargo add --dev
 abbr cb cargo build
+abbr cr cargo run
 abbr ct cargo test
 abbr cir cargo insta review
 abbr cit cargo insta test --unreferenced delete
