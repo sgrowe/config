@@ -64,6 +64,7 @@ abbr jg                jj git
 abbr jgp               jj git push
 abbr jgf               jj git fetch
 abbr jsq               jj squash
+abbr jsqi              jj squash --into
 abbr zsq              "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
 
 

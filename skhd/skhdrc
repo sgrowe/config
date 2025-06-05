@@ -106,7 +106,7 @@
 # ]
 
 rcmd - 1 : open /Applications/1Password.app
-rcmd - t : open /Applications/Ghostty.app
+ctrl - 0x32 : open /Applications/Ghostty.app
 rcmd - l : open /Applications/Linear.app
 rcmd - z : open /Applications/Zed.app
 rcmd - g : open "/Applications/Google Chrome.app"

@@ -35,5 +35,11 @@
     "bindings": {
       "ctrl-`": "workspace::ToggleBottomDock"
     }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "cmd-?": "workspace::ToggleRightDock"
+    }
   }
 ]

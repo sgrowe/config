@@ -3,7 +3,11 @@ name = "Sam Rowe"
 email = "sgrowe@live.co.uk"
 
 [ui]
-default-command = "status"
+default-command = [
+    "log",
+    "-r",
+    "@ | ancestors(remote_bookmarks().., 2) | trunk()",
+]
 pager = "delta"
 
 [ui.diff]

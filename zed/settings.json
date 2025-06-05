@@ -20,7 +20,7 @@
     "always_allow_tool_actions": true,
     "dock": "right",
     "default_model": {
-      "provider": "zed.dev",
+      "provider": "anthropic",
       "model": "claude-sonnet-4-latest"
     },
     "version": "2"
