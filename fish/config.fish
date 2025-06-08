@@ -23,7 +23,9 @@ if status is-interactive
     zoxide init fish | source
 
     # k8s
-    kubectl completion fish | source
+    if command -q kubectl
+        kubectl completion fish | source
+    end
 
     # Prompt
     set -g lucid_prompt_symbol_error "!"
@@ -63,7 +65,8 @@ abbr jbt              "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
 abbr jr                jj rebase
 abbr jg                jj git
 abbr jgp               jj git push
-abbr jgf               jj git fetch
+abbr jgf               jj git fetch # TODO: remove when used to `jf`
+abbr jf                jj git fetch
 abbr jsq               jj squash
 abbr jsqi              jj squash --into
 abbr zsq              "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
@@ -289,9 +292,6 @@ abbr so "xcrun simctl openurl booted (pbpaste)"
 
 # Android simulator
 abbr andr_paste adb shell input text
-
-
-# Projects
 
 
 # Xcode
