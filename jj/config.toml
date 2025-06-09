@@ -9,9 +9,7 @@ default-command = [
     "@ | ancestors(remote_bookmarks().., 2) | trunk()",
 ]
 pager = "delta"
-
-[ui.diff]
-format = "git"
+diff-formatter = ":git"
 
 [git]
 push-new-bookmarks = true
