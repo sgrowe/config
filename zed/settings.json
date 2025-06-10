@@ -46,5 +46,16 @@
     "dark": "Catppuccin Macchiato"
   },
   "use_smartcase_search": true,
-  "ensure_final_newline_on_save": true
+  "ensure_final_newline_on_save": true,
+  "languages": {
+    "ReScript": {
+      "formatter": {
+        "external": {
+          "command": "rescript",
+          "arguments": ["format", "-stdin", "{buffer_path}"]
+        }
+      },
+      "format_on_save": "on"
+    }
+  }
 }
