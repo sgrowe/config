@@ -1,13 +1,22 @@
 *
 
 !.gitignore
+
 !/fish/
+
 !/sam_misc/
 !/sam_misc/**/*
+
 !/zed/
+
+
 !/jj/
 !/jj/**/*
+
 !/skhd
 !/skhd/skhdrc
+
+# Codex
 !/codex/
 !/codex/**
+AGENTS.md

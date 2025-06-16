@@ -23,3 +23,7 @@
 !functions/crawl_doc_page.fish
 !functions/fisher.fish
 !functions/swap_to_from_scss.fish
+
+# Tests
+!tests
+!tests/**/*
