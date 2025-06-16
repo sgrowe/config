@@ -7,8 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  // UI
+  "ui_font_size": 14,
+  "buffer_font_size": 12,
+  "theme": {
+    "mode": "system",
+    "light": "Hex Solarized Light Theme",
+    "dark": "Catppuccin Macchiato"
+  },
+  "terminal": {
+    "font_size": 11,
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "env": {
+      "EDIT": "zed"
+    }
+  },
+
+  // AI
   "edit_predictions": {
-    "mode": "eager",
+    "mode": "subtle",
     "copilot": {
       "proxy": null,
       "proxy_no_verify": null
@@ -25,28 +44,19 @@
     },
     "version": "2"
   },
-  "ui_font_size": 14,
-  "buffer_font_size": 12,
-  "terminal": {
-    "font_size": 11,
-    "env": {
-      "EDIT": "zed"
-    },
-    "toolbar": {
-      "breadcrumbs": false
-    }
-  },
+
+  // Vim
   "vim_mode": true,
   "vim": {
-    "toggle_relative_line_numbers": true
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "on_yank"
   },
-  "theme": {
-    "mode": "system",
-    "light": "Hex Solarized Light Theme",
-    "dark": "Catppuccin Macchiato"
-  },
+
+  // Misc
   "use_smartcase_search": true,
   "ensure_final_newline_on_save": true,
+
+  // Languages
   "languages": {
     "ReScript": {
       "formatter": {
