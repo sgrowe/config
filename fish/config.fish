@@ -45,6 +45,7 @@ abbr fconf "$EDIT ~/.config/fish"
 abbr j                 jj
 abbr js                jj status
 abbr jsp               jj split
+abbr ju                jj undo
 abbr jn                jj new
 abbr jd  --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jds               jj describe
