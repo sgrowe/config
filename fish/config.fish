@@ -1,6 +1,8 @@
 
 # Homebrew - comes first to update env
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if test -f /opt/homebrew/bin/brew
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+end
 
 
 if status is-interactive
@@ -14,13 +16,19 @@ if status is-interactive
     set -x EDITOR "$EDIT --wait"
 
     # fzf: https://junegunn.github.io/fzf/shell-integration/
-    fzf --fish | source
+    if command -q fzf
+        fzf --fish | source
+    end
 
     # direnv
-    direnv hook fish | source
+    if command -q direnv
+        direnv hook fish | source
+    end
 
     # zoxide: https://github.com/ajeetdsouza/zoxide
-    zoxide init fish | source
+    if command -q zoxide
+        zoxide init fish | source
+    end
 
     # k8s
     if command -q kubectl
