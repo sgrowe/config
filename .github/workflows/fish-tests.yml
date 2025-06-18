@@ -1,0 +1,23 @@
+name: Fish Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up fish environment
+        run: |
+          mkdir -p ~/.config
+          ln -s ${{ github.workspace }}/fish ~/.config/fish
+          sudo add-apt-repository -y ppa:fish-shell/release-4
+          sudo apt update -y
+          sudo apt install -y fish
+          fish -c 'fisher update'
+      - name: Run fish tests
+        run: fish codex/test.fish
