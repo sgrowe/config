@@ -1,7 +1,3 @@
-!/usr/bin/env fish
-
-# Test file for _jj_describe_abbr function
-# Run with: fishtape test_jj_describe_abbr.fish
 
 @echo "Testing _jj_describe_abbr function"
 

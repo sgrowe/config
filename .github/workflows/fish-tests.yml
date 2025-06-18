@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up fish environment
         run: |
           mkdir -p ~/.config
@@ -19,5 +20,6 @@ jobs:
           sudo apt update -y
           sudo apt install -y fish
           fish -c 'fisher update'
+
       - name: Run fish tests
-        run: fish codex/test.fish
+        run: ./codex/test.fish
