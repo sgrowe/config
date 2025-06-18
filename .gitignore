@@ -9,17 +9,19 @@
 
 !/zed/
 
-
 !/jj/
 !/jj/**/*
 
 !/skhd
 !/skhd/skhdrc
 
+!/zellij
+!/zellij/**/*
+
 # Codex
 !/codex/
 !/codex/**
+AGENTS.md
 
 !/.github/
 !/.github/**
-AGENTS.md
