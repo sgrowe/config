@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-fishtape ~/.config/fish/tests/*
+fishtape ~/.config/fish/tests/*.fish
