@@ -9,6 +9,11 @@
     "hide": "always"
   },
   {
+    "label": "Spin up test file in zellij",
+    "command": "htest $ZED_RELATIVE_FILE",
+    "tags": ["js-test"]
+  },
+  {
     "label": "Example task",
     "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
     //"args": [],
