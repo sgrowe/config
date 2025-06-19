@@ -35,6 +35,9 @@ if status is-interactive
         kubectl completion fish | source
     end
 
+    if command -q ngrok
+        ngrok completion | source
+    end
     # Prompt
     set -g lucid_prompt_symbol_error "!"
 end
@@ -291,6 +294,10 @@ abbr as aider-script
 
 # auto_describe function
 abbr at auto_describe
+
+
+# Projects
+abbr morn "jj git fetch && jj rebase -d master && make build && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
 
 
 # iOS simulator
