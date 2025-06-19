@@ -13,7 +13,7 @@ add-apt-repository -y ppa:fish-shell/release-4
 
 apt update -y
 
-apt install -y fish
+apt install -y fish ripgrep
 
 
 # Install fish plugins
