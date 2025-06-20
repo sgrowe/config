@@ -41,5 +41,21 @@
     "bindings": {
       "cmd-?": "workspace::ToggleRightDock"
     }
+  },
+  {
+    // alt key to do subword motion
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "alt-w": "vim::NextSubwordStart",
+      "alt-b": "vim::PreviousSubwordStart",
+      "alt-e": "vim::NextSubwordEnd",
+      "g alt-e": "vim::PreviousSubwordEnd"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": ["vim::PushAddSurrounds", {}]
+    }
   }
 ]
