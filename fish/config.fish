@@ -1,16 +1,14 @@
-
 # Homebrew - comes first to update env
 if test -f /opt/homebrew/bin/brew
     eval "$(/opt/homebrew/bin/brew shellenv)"
 end
-
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
 
     # Override `$EDIT` in each editor in order to use itself
     if not set -q EDIT
-        set -x EDIT "zed"
+        set -x EDIT zed
     end
 
     set -x EDITOR "$EDIT --wait"
@@ -42,46 +40,45 @@ if status is-interactive
     set -g lucid_prompt_symbol_error "!"
 end
 
-
 # Be verbose
 abbr mv 'mv -v'
 abbr rm 'rm -v'
 abbr cp 'cp -v'
 
-
 # fish
 abbr conf "$EDIT ~/.config/fish/config.fish"
 abbr fconf "$EDIT ~/.config/fish"
 
-
 # JJ
-abbr j                 jj
-abbr js                jj status
-abbr jsp               jj split
-abbr ju                jj undo
-abbr jn                jj new
-abbr jd  --set-cursor "jj diff --ignore-space-change -r @%"
-abbr jds               jj describe
-abbr jc  --set-cursor "jj commit -m '%'"
-abbr jl                jj log
-abbr jll               jj log --limit 5
-abbr jls               jj log --summary
-abbr je                jj edit
-abbr ja                jj absorb
+abbr j jj
+abbr js jj status
+abbr jsp jj split
+abbr ju jj undo
+abbr jn jj new
+abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
+abbr jds jj describe
+abbr jc --set-cursor "jj commit -m '%'"
+abbr jl jj log
+abbr jll jj log --limit 5
+abbr jls jj log --summary
+abbr je jj edit
+abbr ja jj absorb
 abbr jsh --set-cursor "jj show -r @%"
-abbr jb                jj bookmark
-abbr jbc               jj bookmark create
-abbr jbm               jj bookmark move
-abbr jbt              "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
-abbr jr                jj rebase
-abbr jg                jj git
-abbr jgp               jj git push
-abbr jgf               jj git fetch # TODO: remove when used to `jf`
-abbr jf                jj git fetch
-abbr jsq               jj squash
-abbr jsqi              jj squash --into
-abbr zsq              "jj diff --name-only | fzf --multi --preview 'jj diff --color always {1}' --keep-right | xargs jj squash"
-
+abbr jb jj bookmark
+abbr jbc jj bookmark create
+abbr jbm jj bookmark move
+abbr jbt "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
+abbr jr jj rebase
+abbr jjmerge jj resolve --tool mergiraf
+abbr jg jj git
+abbr jgp jj git push
+abbr jgf jj git fetch # TODO: remove when used to `jf`
+abbr jf jj git fetch
+abbr jw jj workspace
+abbr jwu jj workspace update-stale
+abbr jsq jj squash
+abbr jsqi jj squash --into
+abbr zsq "jj diff --name-only | fzf --multi --preview 'jj diff --color always --git {1}' --keep-right | xargs jj squash"
 
 # `jm` becomes   jj describe -r @ -m ""
 # `jm-` becomes  jj describe -r @- -m ""
@@ -93,27 +90,25 @@ function _jj_describe_abbr
     set -f rev (string sub --start 3 $argv[1])
 
     if test -n (string match --regex "^[-+]*\$" -- $rev || echo "")
-      set -f rev "@$rev"
+        set -f rev "@$rev"
     end
 
     if test -z $rev
-      set -f rev "@-"
+        set -f rev "@-"
     end
 
     echo "jj describe -r $rev -m '%'"
 end
-abbr jj_describe_rev  --regex "jm.*" --set-cursor  --function _jj_describe_abbr
+abbr jj_describe_rev --regex "jm.*" --set-cursor --function _jj_describe_abbr
 
-
-abbr jj_git           --command jj --regex "g"               -- "git"
-abbr jj_msg           --command jj --regex "-m" --set-cursor -- "--message '%'"
-abbr jj_no_edit       --command jj --regex "-ne"             -- "--no-edit"
-abbr jj_limit         --command jj --regex "-l"              -- "--limit 5"
-abbr jj_no_whitespace --command jj --regex "-w"              -- "--ignore-all-space"
+abbr jj_git --command jj --regex g -- git
+abbr jj_msg --command jj --regex -m --set-cursor -- "--message '%'"
+abbr jj_no_edit --command jj --regex -ne -- --no-edit
+abbr jj_limit --command jj --regex -l -- "--limit 5"
+abbr jj_no_whitespace --command jj --regex -w -- --ignore-all-space
 
 abbr mn "jj git fetch && jj rebase -d main"
 abbr ma "jj git fetch && jj rebase -d master"
-
 
 # Expands `^` to the last argument of the most recent command
 # e.g.
@@ -124,7 +119,6 @@ function _last_arg_of_most_recent_command
     echo $history[1] | string split ' ' | tail -n 1
 end
 abbr --position anywhere ^ --function _last_arg_of_most_recent_command
-
 
 # git
 abbr ga git add
@@ -191,23 +185,19 @@ abbr gsw "git branch | fzf --preview 'git log --color=always {-1}' --bind 'enter
 # Replaced with jj equivalent above ^
 # abbr mn "git switch main && git pull --autostash"
 
-
 # cd
 abbr cdr "cd (jj root)"
 
-
 # fd
 # https://github.com/sharkdp/fd
-abbr f    fd --no-require-git
-abbr ft  "fd --no-require-git | tree --fromfile"
-
+abbr f fd --no-require-git
+abbr ft "fd --no-require-git | tree --fromfile"
 
 # ls + eza
-abbr l   eza
-abbr l1  eza --all -1
-abbr ll  eza --all --long
-abbr lh  eza --all --long --total-size
-
+abbr l eza
+abbr l1 eza --all -1
+abbr ll eza --all --long
+abbr lh eza --all --long --total-size
 
 # Rust
 abbr c cargo
@@ -219,18 +209,15 @@ abbr ct cargo test
 abbr cir cargo insta review
 abbr cit cargo insta test --unreferenced delete
 
-
 # docker
 abbr d docker
 abbr dr docker run
 abbr db docker buildx
 
-
 # npm
 abbr n npm
 abbr nr npm run
 abbr ni npm install
-
 
 # yarn
 abbr y yarn
@@ -238,39 +225,31 @@ abbr ya yarn add
 abbr yad yarn add --dev
 abbr yw yarn workspace
 
-
 # pnpm
-abbr p  pnpm
+abbr p pnpm
 abbr pr pnpm run
 abbr pe pnpm exec
 abbr pi pnpm install
 
-
 # brew
 abbr b brew
 
-
 # make
 abbr m make
-
 
 # Next.js
 set -gx NEXT_TELEMETRY_DISABLED 1
 # Turbo
 set -gx TURBO_TELEMETRY_DISABLED 1
 
-
 # Hurl
 abbr h hurl
-
 
 # Zed
 abbr ze zed
 
-
 # Cursor
 abbr cu cursor
-
 
 # Aider
 abbr a aider
@@ -284,34 +263,40 @@ abbr aider_msgf --command aider --regex mf -- --message-file
 abbr aider_test --command aider --regex t -- --test
 abbr aider_wtch --command aider --regex w -- --watch-files
 
-
 set -x AIDER_NOTIFICATIONS true
-
 
 # aider-script
 abbr as aider-script
 
-
 # auto_describe function
 abbr at auto_describe
 
-
 # Projects
 abbr morn "jj git fetch && jj rebase -d master && make build && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
-
 
 # iOS simulator
 # Open url in already booted simulator
 abbr so "xcrun simctl openurl booted (pbpaste)"
 
-
 # Android simulator
 abbr andr_paste adb shell input text
-
 
 # Xcode
 abbr xcderiv cd ~/Library/Developer/Xcode/DerivedData
 
+# Project specific
+abbr ava "pnpm --dir app/server exec ava"
+abbr ch "./scripts/check.sh"
 
 # Add Google Cloud SDK to PATH
-if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end
+if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]
+    . "$HOME/google-cloud-sdk/path.fish.inc"
+end
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+test -r '/Users/sam/.opam/opam-init/init.fish' && source '/Users/sam/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
+# END opam configuration

@@ -15,6 +15,7 @@ default-command = [
 
 # Difftastic
 diff-formatter = ["difft", "--color=always", "$left", "$right"]
+diff-editor = ":builtin"
 
 [git]
 push-new-bookmarks = true

@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // UI
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "ui_font_size": 14,
   "buffer_font_size": 12,
   "theme": {
@@ -24,6 +27,12 @@
       "EDIT": "zed"
     }
   },
+  "title_bar": {
+    "show_branch_name": false
+  },
+
+  // Multibuffer
+  "expand_excerpt_lines": 10,
 
   // AI
   "edit_predictions": {
@@ -39,14 +48,14 @@
     "always_allow_tool_actions": true,
     "dock": "right",
     "default_model": {
-      "provider": "anthropic",
-      "model": "claude-sonnet-4-latest"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
 
   // Vim
-  "vim_mode": true,
+  "vim_mode": false,
   "vim": {
     "toggle_relative_line_numbers": true,
     "use_system_clipboard": "on_yank"
