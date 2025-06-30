@@ -8,8 +8,13 @@ default-command = [
     "-r",
     "@ | ancestors(remote_bookmarks().., 2) | trunk()",
 ]
-pager = "delta"
-diff-formatter = ":git"
+
+# Delta
+# pager = "delta"
+# diff-formatter = ":git"
+
+# Difftastic
+diff-formatter = ["difft", "--color=always", "$left", "$right"]
 
 [git]
 push-new-bookmarks = true
