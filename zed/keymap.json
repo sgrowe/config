@@ -25,12 +25,6 @@
     }
   },
   {
-    "context": "Editor",
-    "bindings": {
-      // "j k": ["workspace::SendKeystrokes", "escape"]
-    }
-  },
-  {
     "context": "Pane",
     "bindings": {
       "ctrl-`": "workspace::ToggleBottomDock"
@@ -58,4 +52,12 @@
       "shift-s": ["vim::PushAddSurrounds", {}]
     }
   }
+  // MiniQuotes + MiniBrackets bindings
+  // {
+  //   "context": "vim_operator == a || vim_operator == i || vim_operator == cs",
+  //   "bindings": {
+  //     "q": "vim::MiniQuotes"
+  //     // "b": "vim::MiniBrackets"
+  //   }
+  // }
 ]

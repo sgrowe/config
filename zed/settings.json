@@ -55,9 +55,28 @@
   // Misc
   "use_smartcase_search": true,
   "ensure_final_newline_on_save": true,
+  "inlay_hints": {
+    "toggle_on_modifiers_press": {
+      "control": true
+    }
+  },
+  "journal": {
+    "hour_format": "hour24"
+  },
 
   // Languages
   "languages": {
+    "JavaScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
+    "TypeScript": {
+      "language_servers": ["vtsls"],
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      }
+    },
     "ReScript": {
       "formatter": {
         "external": {
