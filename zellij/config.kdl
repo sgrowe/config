@@ -1,5 +1,10 @@
 
 keybinds clear-defaults=true {
+    // Added by me
+    normal {
+        bind "Ctrl l" { Clear; }
+    }
+    // Was here before:
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }
     }
