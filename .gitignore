@@ -23,5 +23,9 @@
 !/codex/**
 AGENTS.md
 
+!CLAUDE.md
+!.claude/
+!.claude/**
+
 !/.github/
 !/.github/**
