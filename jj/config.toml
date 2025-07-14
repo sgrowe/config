@@ -21,6 +21,9 @@ diff-formatter = ["difft", "--color=always", "$left", "$right"]
 [git]
 push-new-bookmarks = true
 
+[revsets]
+log = 'present(@) | ancestors((immutable_heads() | present(next@origin)).., 2) | present(trunk())'
+
 [revset-aliases]
 "immutable_heads()" = "builtin_immutable_heads() & ~present(next@origin)"
 'closest_bookmark(to)' = 'heads(::to & bookmarks()) & ~trunk()'

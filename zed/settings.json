@@ -50,12 +50,11 @@
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
 
   // Vim
-  "vim_mode": false,
+  "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
     "use_system_clipboard": "on_yank"
