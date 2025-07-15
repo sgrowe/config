@@ -73,6 +73,7 @@ abbr jjmerge jj resolve --tool mergiraf
 abbr jg jj git
 abbr jgp jj git push
 abbr jgf jj git fetch # TODO: remove when used to `jf`
+abbr jgc jj git clone --colocate
 abbr jf jj git fetch
 abbr jw jj workspace
 abbr jwu jj workspace update-stale
