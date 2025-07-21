@@ -21,6 +21,9 @@ diff-formatter = ["difft", "--color=always", "$left", "$right"]
 [git]
 push-new-bookmarks = true
 
+# Prevent pushing anything explicitly labeled "private"
+private-commits = "description(glob:'private:*')"
+
 [revsets]
 log = 'present(@) | ancestors((immutable_heads() | present(next@origin)).., 2) | present(trunk())'
 
