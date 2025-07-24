@@ -55,8 +55,8 @@ abbr js jj status
 abbr jsp jj split
 abbr ju jj undo
 abbr jn  jj new
-abbr jna jj new --after
-abbr jnb jj new --before
+abbr jna jj new --no-edit --after
+abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jds jj describe
 abbr jc --set-cursor "jj commit -m '%'"
