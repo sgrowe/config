@@ -117,5 +117,5 @@ rcmd - d    : open /Applications/Figma.app
 rcmd - q    : open /Applications/TablePlus.app
 rcmd - h    : open /Applications/Heynote.app
 rcmd - p    : open /Applications/ChatGPT.app
-rcmd - c    : open /Applications/Cursor.app
+rcmd - c    : open /Applications/Claude.app
 rcmd - n    : open /System/Applications/Notes.app
