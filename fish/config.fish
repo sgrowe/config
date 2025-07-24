@@ -79,6 +79,11 @@ abbr jw jj workspace
 abbr jwu jj workspace update-stale
 abbr jsq jj squash
 abbr jsqi jj squash --into
+
+# `jsq` behaves like `jm` but for `jj squash`. Examples:
+# `jsqol`  -> `jj squash --into ol`
+# `jsq-`   -> `jj squash --into @-`
+abbr jj_squash_into_rev --regex "jsq.*" --function _jj_squash_abbr
 abbr zsq "jj diff --name-only | fzf --multi --preview 'jj diff --color always --git {1}' --keep-right | xargs jj squash"
 
 # `jm` becomes   jj describe -r @ -m ""
