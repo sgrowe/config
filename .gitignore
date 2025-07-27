@@ -21,8 +21,9 @@
 # Codex
 !/codex/
 !/codex/**
-AGENTS.md
+!AGENTS.md
 !fish/AGENTS.md
+
 
 !CLAUDE.md
 !.claude/
