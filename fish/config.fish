@@ -60,19 +60,21 @@ abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jds jj describe
-abbr jc --set-cursor "jj commit -m '%'"
+abbr jc jj commit
 abbr jl  jj log
 abbr jll jj log --limit 8
 abbr jls jj log --summary
 abbr jlt "jj log -r 'trunk()::@'"
 abbr je jj edit
 abbr ja jj absorb
+abbr jab jj abandon
 abbr jsh --set-cursor "jj show -r @%"
 abbr jb  jj bookmark
 abbr jbc jj bookmark create
 abbr jbm jj bookmark move
+abbr jbt jj bookmark track
 abbr jbf jj bookmark forget
-abbr jbt "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
+abbr jtug "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
 abbr jr jj rebase
 abbr jjmerge jj resolve --tool mergiraf
 abbr jg jj git
@@ -90,6 +92,7 @@ abbr jsqi jj squash --into
 # `jsq-`   -> `jj squash --into @-`
 abbr jj_squash_into_rev --regex "jsq.*" --function _jj_squash_abbr
 abbr zsq "jj diff --name-only | fzf --multi --preview 'jj diff --color always --git {1}' --keep-right | xargs jj squash"
+
 
 # `jm` becomes   jj describe -r @ -m ""
 # `jm-` becomes  jj describe -r @- -m ""
@@ -263,6 +266,9 @@ abbr m make
 set -gx NEXT_TELEMETRY_DISABLED 1
 # Turbo
 set -gx TURBO_TELEMETRY_DISABLED 1
+
+# Claude code
+set -gx DISABLE_TELEMETRY 1
 
 # Hurl
 abbr h hurl

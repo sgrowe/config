@@ -52,6 +52,10 @@
       "model": "claude-sonnet-4-thinking"
     }
   },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
 
   // Vim
   "vim_mode": true,
