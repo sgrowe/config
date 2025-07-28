@@ -67,9 +67,10 @@ abbr jls jj log --summary
 abbr je jj edit
 abbr ja jj absorb
 abbr jsh --set-cursor "jj show -r @%"
-abbr jb jj bookmark
+abbr jb  jj bookmark
 abbr jbc jj bookmark create
 abbr jbm jj bookmark move
+abbr jbf jj bookmark forget
 abbr jbt "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
 abbr jr jj rebase
 abbr jjmerge jj resolve --tool mergiraf
@@ -130,6 +131,8 @@ end
 abbr --position anywhere ^ --function _last_arg_of_most_recent_command
 
 # git
+abbr g git
+
 abbr ga git add
 abbr gai git add --interactive
 
