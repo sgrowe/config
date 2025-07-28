@@ -36,6 +36,7 @@ if status is-interactive
     if command -q ngrok
         ngrok completion | source
     end
+
     # Prompt
     set -g lucid_prompt_symbol_error "!"
 end
@@ -308,3 +309,6 @@ end
 # This section can be safely removed at any time if needed.
 test -r '/Users/sam/.opam/opam-init/init.fish' && source '/Users/sam/.opam/opam-init/init.fish' >/dev/null 2>/dev/null; or true
 # END opam configuration
+
+# Difftastic
+set -x DFT_PARSE_ERROR_LIMIT 20
