@@ -83,7 +83,7 @@
       }
     },
     "TypeScript": {
-      "language_servers": ["vtsls"],
+      "language_servers": ["tsgo", "vtsls"],
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
