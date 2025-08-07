@@ -197,6 +197,15 @@ abbr gsw "git branch | fzf --preview 'git log --color=always {-1}' --bind 'enter
 # Replaced with jj equivalent above ^
 # abbr mn "git switch main && git pull --autostash"
 
+
+# kubectl
+abbr k   kubectl
+abbr kci kubectl cluster-info
+abbr kg  kubectl get
+abbr kgp kubectl get pods
+abbr kd  kubectl describe
+abbr kl  kubectl logs
+
 # cd
 abbr cdr "cd (jj root)"
 
