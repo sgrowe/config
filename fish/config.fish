@@ -61,9 +61,10 @@ abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jds jj describe
 abbr jc --set-cursor "jj commit -m '%'"
-abbr jl jj log
+abbr jl  jj log
 abbr jll jj log --limit 8
 abbr jls jj log --summary
+abbr jlt "jj log -r 'trunk()::@'"
 abbr je jj edit
 abbr ja jj absorb
 abbr jsh --set-cursor "jj show -r @%"

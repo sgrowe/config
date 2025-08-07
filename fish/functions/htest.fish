@@ -17,5 +17,6 @@ function htest
     set -l testpath (string join "/" $rest)
 
     # Execute the command
-    zellij run --cwd "$cwd" --in-place -- pnpm run ava --watch "$testpath"
+    zellij run --in-place --cwd "$cwd" -- pnpm run ava --watch "$testpath"
+
 end
