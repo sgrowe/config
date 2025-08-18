@@ -31,4 +31,13 @@ end
     swap_to_from_scss
 ) = "$res_file:2"
 
+@test "fallback to .tsx if .res missing" (
+    set -gx ZED_FILE $scss_file
+    set -e ZED_SELECTED_TEXT
+    rm $res_file
+    set -g tsx_file "$tmpdir/foo.tsx"
+    touch $tsx_file
+    swap_to_from_scss
+) = $tsx_file
+
 rm -rf $tmpdir
