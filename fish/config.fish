@@ -59,7 +59,6 @@ abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
-abbr jds jj describe
 abbr jc jj commit
 abbr jl  jj log
 abbr jll jj log --limit 8
@@ -99,8 +98,6 @@ abbr zsq "jj diff --name-only | fzf --multi --preview 'jj diff --color always --
 # `jm--` becomes jj describe -r @-- -m ""
 # `jmxy` becomes jj describe -r xy -m ""
 function _jj_describe_abbr
-    set -f fish_trace 1
-
     set -f rev (string sub --start 3 $argv[1])
 
     if test -n (string match --regex "^[-+]*\$" -- $rev || echo "")
@@ -114,6 +111,7 @@ function _jj_describe_abbr
     echo "jj describe -r $rev -m '%'"
 end
 abbr jj_describe_rev --regex "jm.*" --set-cursor --function _jj_describe_abbr
+abbr jj_describe_rev_no_msg --regex "jds.*" --function _jj_describe_abbr_no_msg
 
 abbr jj_git --command jj --regex g -- git
 abbr jj_msg --command jj --regex -m --set-cursor -- "--message '%'"
