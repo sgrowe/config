@@ -1,4 +1,4 @@
-function _jj_squash_abbr
+function _jj_describe_abbr_no_msg
     set -f rev (string sub --start 4 $argv[1])
 
     if test -n (string match --regex "^[-+]*\$" -- $rev || echo "")
@@ -6,9 +6,8 @@ function _jj_squash_abbr
     end
 
     if test -z $rev
-        echo "jj squash"
-        return
+        set -f rev "@"
     end
 
-    echo "jj squash --into $rev"
+    echo "jj describe -r $rev"
 end

@@ -19,6 +19,7 @@ fish -c 'fishtape fish/tests/test_jj_describe_abbr.fish'
 ## Test Files
 
 - `test_jj_describe_abbr.fish` - Tests for the `_jj_describe_abbr` function that handles jj describe abbreviations
+- `test_jds_abbr.fish` - Tests for the `_jj_describe_abbr_no_msg` function that handles jj describe abbreviations without a message
 - `test_swap_to_from_scss.fish` - Tests for the `swap_to_from_scss` function that switches between `.scss` and `.res` files
 
 ## Test Framework
