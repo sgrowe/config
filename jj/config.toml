@@ -52,6 +52,15 @@ log = "builtin_log_comfortable"
 command = ["fish", "--command=fish_indent"]
 patterns = ["glob:'**/*.fish'"]
 
+[fix.tools.prettier]
+command = ["pnpm", "exec", "prettier", "--stdin-filepath=$path"]
+patterns = [
+    "glob:'**/*.js'",
+    "glob:'**/*.jsx'",
+    "glob:'**/*.ts'",
+    "glob:'**/*.tsx'",
+    "glob:'**/*.json'",
+]
 
 [fix.tools.app_client_rescript]
 command = ["pnpm", "exec", "rescript", "format", "-stdin", ".res"]
