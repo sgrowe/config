@@ -5,9 +5,11 @@
 set -g tmpdir (mktemp -d)
 set -g scss_file "$tmpdir/foo.scss"
 set -g res_file "$tmpdir/foo.res"
+set -g bsjs_file "$tmpdir/foo.bs.js"
 
 echo "color: red;" > $scss_file
 printf "hello\nworld\n" > $res_file
+touch $bsjs_file
 
 function zed
     echo $argv
@@ -30,6 +32,12 @@ end
     set -gx ZED_SELECTED_TEXT "world"
     swap_to_from_scss
 ) = "$res_file:2"
+
+@test "open .res from .bs.js" (
+    set -gx ZED_FILE $bsjs_file
+    set -e ZED_SELECTED_TEXT
+    swap_to_from_scss
+) = $res_file
 
 @test "fallback to .tsx if .res missing" (
     set -gx ZED_FILE $scss_file

@@ -10,6 +10,8 @@ function swap_to_from_scss
         else
             set -f target_file "$base.res"
         end
+    else if string match -q -r '\\.bs\\.js$' "$ZED_FILE"
+        set -f target_file (string replace -r '\\.bs\\.js$' '.res' "$ZED_FILE")
     else
         set -f target_file (string replace -r '\\.\\w+$' '.scss' "$ZED_FILE")
     end
