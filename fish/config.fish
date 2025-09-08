@@ -58,7 +58,7 @@ abbr ju jj undo
 abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
-abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
+abbr jd "jj log --color=always --no-graph -T '{change_id.short} {description.first_line}' | fzf --ansi --preview 'jj show --color always {1}' --keep-right | cut -d' ' -f1 | xargs -I{} jj diff --ignore-space-change -r @{}"
 abbr jc jj commit
 abbr jl  jj log
 abbr jll jj log --limit 8
