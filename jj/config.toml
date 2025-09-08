@@ -62,6 +62,10 @@ patterns = [
     "glob:'**/*.json'",
 ]
 
+[fix.tools.rustfmt]
+command = ["rustfmt"]
+patterns = ["glob:'**/*.rs'"]
+
 [fix.tools.app_client_rescript]
 command = ["pnpm", "exec", "rescript", "format", "-stdin", ".res"]
 patterns = ["glob:'app/client/**/*.res'"]
