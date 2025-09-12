@@ -25,6 +25,12 @@
     }
   },
   {
+    "context": "Editor",
+    "bindings": {
+      "alt-t": ["task::Spawn", { "task_name": "Spin up test file in zellij" }]
+    }
+  },
+  {
     "context": "Pane",
     "bindings": {
       "ctrl-`": "workspace::ToggleBottomDock"
@@ -49,7 +55,7 @@
   {
     "context": "vim_mode == visual",
     "bindings": {
-      "shift-s": ["vim::PushAddSurrounds", {}]
+      "shift-s": "vim::PushAddSurrounds"
     }
   }
   // MiniQuotes + MiniBrackets bindings

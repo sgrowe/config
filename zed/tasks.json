@@ -11,7 +11,9 @@
   {
     "label": "Spin up test file in zellij",
     "command": "htest $ZED_RELATIVE_FILE",
-    "tags": ["js-test"]
+    "tags": ["js-test"],
+    "reveal": "never",
+    "hide": "always"
   },
   {
     "label": "Example task",
