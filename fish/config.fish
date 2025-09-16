@@ -52,6 +52,7 @@ abbr fconf "$EDIT ~/.config/fish"
 
 # JJ
 abbr j jj
+abbr ji jjui
 abbr js jj status
 abbr jsp jj split
 abbr ju jj undo
@@ -59,7 +60,7 @@ abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
-abbr jc jj commit
+abbr jc --set-cursor "jj commit --message '%'"
 abbr jl  jj log
 abbr jll jj log --limit 8
 abbr jls jj log --summary
