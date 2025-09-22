@@ -10,7 +10,7 @@
   },
   {
     "label": "Spin up test file in zellij",
-    "command": "htest $ZED_RELATIVE_FILE",
+    "command": "htest $ZED_RELATIVE_FILE && open -a Ghostty",
     "tags": ["js-test"],
     "reveal": "never",
     "hide": "always"
