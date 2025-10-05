@@ -106,7 +106,7 @@
 # ]
 
 ctrl - 0x32 : open -a "Ghostty"
-rcmd - 1    : open -a "1Password 7 - Password Manager"
+rcmd - 1    : open -a "1Password 7" || open -a "1Password"
 rcmd - a    : open -a "Activity Monitor"
 rcmd - l    : open -a "Linear"
 rcmd - z    : open -a "Zed"
