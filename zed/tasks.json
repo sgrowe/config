@@ -16,6 +16,12 @@
     "hide": "always"
   },
   {
+    "label": "Open local config",
+    "command": "zed ~/work/monorepo/humaans/app/server/config/local.yml",
+    "reveal": "never",
+    "hide": "always"
+  },
+  {
     "label": "Example task",
     "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
     //"args": [],

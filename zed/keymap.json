@@ -25,6 +25,13 @@
     }
   },
   {
+    // need the specificity to override built-in key bindings
+    "context": "Workspace || ((Editor && !agent_diff) && !AgentPanel)",
+    "bindings": {
+      "cmd-y": ["task::Spawn", { "task_name": "Open local config" }]
+    }
+  },
+  {
     "context": "Editor",
     "bindings": {
       "alt-t": ["task::Spawn", { "task_name": "Spin up test file in zellij" }]
