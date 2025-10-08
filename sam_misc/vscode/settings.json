@@ -111,6 +111,5 @@
   },
   "makefile.configureOnOpen": false,
   "terminal.integrated.defaultProfile.osx": "fish",
-  "security.workspace.trust.untrustedFiles": "open",
-  "update.showReleaseNotes": false
+  "security.workspace.trust.untrustedFiles": "open"
 }

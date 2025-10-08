@@ -82,11 +82,13 @@
       "format_on_save": "on"
     },
     "JavaScript": {
+      "format_on_save": "on",
       "code_actions_on_format": {
         "source.fixAll.eslint": true
       }
     },
     "TypeScript": {
+      "format_on_save": "on",
       "language_servers": [
         // "tsgo",
         "vtsls"
@@ -96,13 +98,13 @@
       }
     },
     "ReScript": {
+      "format_on_save": "on",
       "formatter": {
         "external": {
           "command": "rescript",
           "arguments": ["format", "-stdin", "{buffer_path}"]
         }
-      },
-      "format_on_save": "on"
+      }
     }
   }
 }
