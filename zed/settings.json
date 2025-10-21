@@ -83,19 +83,25 @@
     },
     "JavaScript": {
       "format_on_save": "on",
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      "formatter": [
+        "auto",
+        {
+          "code_action": "source.fixAll.eslint"
+        }
+      ]
     },
     "TypeScript": {
       "format_on_save": "on",
+      "formatter": [
+        "auto",
+        {
+          "code_action": "source.fixAll.eslint"
+        }
+      ],
       "language_servers": [
         // "tsgo",
         "vtsls"
-      ],
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+      ]
     },
     "ReScript": {
       "format_on_save": "on",
