@@ -300,7 +300,7 @@ abbr as aider-script
 abbr at auto_describe
 
 # Projects
-abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && make build && make migrate && make test-migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
+abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && make build && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
 
 # iOS simulator
 # Open url in already booted simulator
