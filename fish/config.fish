@@ -71,6 +71,7 @@ abbr ja jj absorb
 abbr jab jj abandon
 abbr jsh --set-cursor "jj show -r @%"
 abbr jb  jj bookmark
+abbr jbl jj bookmark list
 abbr jbc jj bookmark create -r
 abbr jbm jj bookmark move
 abbr jbt jj bookmark track
