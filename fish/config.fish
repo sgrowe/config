@@ -63,9 +63,8 @@ abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jc --set-cursor "jj commit --message '%'"
 abbr jci "jj commit --interactive"
 abbr jl  jj log
-abbr jll jj log --limit 8
+abbr jla jj log -r 'all()'
 abbr jls jj log --summary
-abbr jlt "jj log -r 'trunk()::@'"
 abbr je jj edit
 abbr ja jj absorb
 abbr jab jj abandon

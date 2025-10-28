@@ -6,7 +6,7 @@ email = "sgrowe@live.co.uk"
 default-command = [
     "log",
     "-r",
-    "@ | ancestors(remote_bookmarks().., 2) | trunk()",
+    "trunk() | (trunk():: & mine())"
 ]
 
 diff-editor = ":builtin"
