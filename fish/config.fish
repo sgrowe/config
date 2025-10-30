@@ -62,9 +62,9 @@ abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
 abbr jc --set-cursor "jj commit --message '%'"
 abbr jci "jj commit --interactive"
-abbr jl  jj log
-abbr jla jj log -r 'all()'
-abbr jls jj log --summary
+abbr jl   jj log
+abbr jla "jj log -r 'all()'"
+abbr jls  jj log --summary
 abbr je jj edit
 abbr ja jj absorb
 abbr jab jj abandon
@@ -276,8 +276,8 @@ abbr h hurl
 # Zed
 abbr ze zed
 
-# Cursor
-abbr cu cursor
+# pgcli
+abbr pg pgcli
 
 # Aider
 abbr a aider
@@ -330,4 +330,4 @@ test -r '/Users/sam/.opam/opam-init/init.fish' && source '/Users/sam/.opam/opam-
 # END opam configuration
 
 # Difftastic
-set -x DFT_PARSE_ERROR_LIMIT 20
+set -x DFT_PARSE_ERROR_LIMIT 25
