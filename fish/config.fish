@@ -59,7 +59,7 @@ abbr ju jj undo
 abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
-abbr jd --set-cursor "jj diff --ignore-space-change -r @%"
+abbr jd --set-cursor "jj diff -r @%"
 abbr jc --set-cursor "jj commit --message '%'"
 abbr jci "jj commit --interactive"
 abbr jl   jj log
