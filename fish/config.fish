@@ -110,7 +110,7 @@ function _jj_describe_abbr
         set -f rev "@-"
     end
 
-    echo "jj describe -r $rev -m '%'"
+    echo "jj describe -r $rev"
 end
 abbr jj_describe_rev --regex "jm.*" --set-cursor --function _jj_describe_abbr
 abbr jj_describe_rev_no_msg --regex "jds.*" --function _jj_describe_abbr_no_msg
