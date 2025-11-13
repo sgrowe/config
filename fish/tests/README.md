@@ -36,7 +36,7 @@ Tests are written using the `@test` function:
 
 Example:
 ```fish
-@test "jm defaults to @-" (_jj_describe_abbr "jm") = "jj describe -r @- -m '%'"
+@test "jm defaults to @-" (_jj_describe_abbr "jm") = "jj describe -r @-"
 ```
 
 ### Test Structure
