@@ -48,8 +48,8 @@
     "always_allow_tool_actions": true,
     "dock": "right",
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-5-thinking-latest"
     }
   },
   "telemetry": {
