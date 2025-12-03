@@ -315,7 +315,7 @@ abbr xcderiv cd ~/Library/Developer/Xcode/DerivedData
 # Project specific
 abbr ava "pnpm --dir app/server exec ava"
 abbr ch "./scripts/check.sh"
-abbr oln "jj rebase -r oln --before @"
+abbr zmt "jj rebase -r zmt --before @"
 
 # Add Google Cloud SDK to PATH
 if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]
