@@ -18,9 +18,10 @@ diff-editor = ":builtin"
 # Difftastic
 diff-formatter = ["difft", "--color=always", "$left", "$right"]
 
-[git]
-push-new-bookmarks = true
+[remotes.origin]
+auto-track-bookmarks = "glob:* ~ next"
 
+[git]
 # Prevent pushing anything explicitly labeled "private"
 private-commits = "description(glob:'private:*')"
 
@@ -33,6 +34,7 @@ log = 'present(@) | ancestors((immutable_heads() | present(next@origin)).., 2) |
 
 [templates]
 log = "builtin_log_comfortable"
+git_push_bookmark = '"sgrowe/push-" ++ change_id.short()'
 
 [template-aliases]
 # Relative timestamp rendered as "x days/hours/seconds ago"
@@ -46,6 +48,10 @@ log = "builtin_log_comfortable"
 
 # Don't bother showing the full change ID in the logs
 'format_short_change_id(id)' = 'pad_end(6, id.shortest())'
+
+
+[snapshot]
+auto-update-stale = true
 
 
 [fix.tools.fish]
