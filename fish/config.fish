@@ -86,7 +86,7 @@ abbr jf jj git fetch
 abbr jw jj workspace
 abbr jwu jj workspace update-stale
 abbr jsq jj squash
-abbr jsqi jj squash --into
+abbr jsqi jj squash --interactive
 
 # `jsq` behaves like `jm` but for `jj squash`. Examples:
 # `jsqol`  -> `jj squash --into ol`
