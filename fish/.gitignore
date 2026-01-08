@@ -30,6 +30,7 @@
 !functions/swap_to_from_scss.fish
 !functions/_jj_squash_abbr.fish
 !functions/_jj_describe_abbr_no_msg.fish
+!functions/wt.fish
 
 # Tests
 !tests
