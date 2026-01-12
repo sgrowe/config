@@ -8,6 +8,9 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   // UI
+  "git_panel": {
+    "tree_view": true
+  },
   "features": {
     "edit_prediction_provider": "zed"
   },

@@ -5,8 +5,8 @@ email = "sgrowe@live.co.uk"
 [ui]
 default-command = [
     "log",
-    "-r",
-    "trunk() | (trunk():: & mine())"
+    # "-r",
+    # "trunk() | (trunk():: & mine())"
 ]
 
 diff-editor = ":builtin"
@@ -17,9 +17,6 @@ diff-editor = ":builtin"
 
 # Difftastic
 diff-formatter = ["difft", "--color=always", "$left", "$right"]
-
-[remotes.origin]
-auto-track-bookmarks = "glob:* ~ next"
 
 [git]
 # Prevent pushing anything explicitly labeled "private"
