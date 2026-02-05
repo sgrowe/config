@@ -332,3 +332,10 @@ test -r '/Users/sam/.opam/opam-init/init.fish' && source '/Users/sam/.opam/opam-
 
 # Difftastic
 set -x DFT_PARSE_ERROR_LIMIT 25
+
+# pnpm
+set -gx PNPM_HOME "/Users/sam/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
