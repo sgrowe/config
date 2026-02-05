@@ -9,29 +9,29 @@
 {
   // UI
   "git_panel": {
-    "tree_view": true
+    "tree_view": true,
   },
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "ui_font_size": 14,
   "buffer_font_size": 12,
   "theme": {
     "mode": "system",
     "light": "Hex Solarized Light Theme",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Macchiato",
   },
   "terminal": {
     "font_size": 11,
     "toolbar": {
-      "breadcrumbs": false
+      "breadcrumbs": false,
     },
     "env": {
-      "EDIT": "zed"
-    }
+      "EDIT": "zed",
+    },
   },
   "title_bar": {
-    "show_branch_name": false
+    "show_branch_name": false,
   },
 
   // Multibuffer
@@ -47,9 +47,9 @@
     "mode": "subtle",
     "copilot": {
       "proxy": null,
-      "proxy_no_verify": null
+      "proxy_no_verify": null,
     },
-    "enabled_in_text_threads": false
+    "enabled_in_text_threads": false,
   },
   "agent": {
     "default_profile": "write",
@@ -57,19 +57,19 @@
     "dock": "right",
     "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4-5-thinking-latest"
-    }
+      "model": "claude-opus-4-5-thinking-latest",
+    },
   },
   "telemetry": {
     "diagnostics": false,
-    "metrics": false
+    "metrics": false,
   },
 
   // Vim
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
-    "use_system_clipboard": "on_yank"
+    "use_system_clipboard": "on_yank",
   },
 
   // Misc
@@ -77,39 +77,42 @@
   "ensure_final_newline_on_save": true,
   "inlay_hints": {
     "toggle_on_modifiers_press": {
-      "control": true
-    }
+      "control": true,
+    },
   },
   "journal": {
-    "hour_format": "hour24"
+    "hour_format": "hour24",
   },
 
   // Languages
   "languages": {
     "Markdown": {
-      "format_on_save": "on"
+      "format_on_save": "on",
     },
     "JavaScript": {
       "format_on_save": "on",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
-      }
+        "source.fixAll.eslint": true,
+      },
     },
     "TypeScript": {
       "format_on_save": "on",
       "code_actions_on_format": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": true,
       },
-      "language_servers": ["tsgo", "vtsls"]
+      "language_servers": [
+        // "tsgo",
+        "vtsls",
+      ],
     },
     "ReScript": {
       "format_on_save": "on",
       "formatter": {
         "external": {
           "command": "rescript",
-          "arguments": ["format", "-stdin", "{buffer_path}"]
-        }
-      }
-    }
-  }
+          "arguments": ["format", "-stdin", "{buffer_path}"],
+        },
+      },
+    },
+  },
 }
