@@ -68,7 +68,7 @@ abbr jls  jj log --summary
 abbr je jj edit
 abbr ja jj absorb
 abbr jab jj abandon
-abbr jsh --set-cursor "jj show -r @%"
+abbr jsh jj show
 abbr jb  jj bookmark
 abbr jbl jj bookmark list
 abbr jbc jj bookmark create -r
