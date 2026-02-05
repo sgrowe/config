@@ -37,6 +37,11 @@
   // Multibuffer
   "expand_excerpt_lines": 10,
 
+  "file_types": {
+    // Use markdown for jj change descriptions
+    "Markdown": ["*.jjdescription"],
+  },
+
   // AI
   "edit_predictions": {
     "mode": "subtle",
