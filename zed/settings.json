@@ -11,9 +11,6 @@
   "git_panel": {
     "tree_view": true,
   },
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "ui_font_size": 14,
   "buffer_font_size": 12,
   "theme": {
@@ -44,6 +41,7 @@
 
   // AI
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle",
     "copilot": {
       "proxy": null,
