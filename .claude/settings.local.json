@@ -2,9 +2,5 @@
   "permissions": {
     "allow": ["Bash(jj file list:*)"],
     "deny": []
-  },
-  "sandbox": {
-    "enabled": true,
-    "autoAllowBashIfSandboxed": true
   }
 }

@@ -1,0 +1,17 @@
+{
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
+  },
+  "extraKnownMarketplaces": {
+    "company-tools": {
+      "source": {
+        "source": "github",
+        "repo": "sgrowe/jj-ai"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "jj-flow@jj-ai": true
+  }
+}
