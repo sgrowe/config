@@ -73,6 +73,7 @@ abbr jb  jj bookmark
 abbr jbl jj bookmark list
 abbr jbc jj bookmark create -r
 abbr jbm jj bookmark move
+abbr bm jj bookmark move main --to @-
 abbr jbt jj bookmark track
 abbr jbf jj bookmark forget
 abbr jtug "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
