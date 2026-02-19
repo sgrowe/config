@@ -48,4 +48,34 @@ end
     swap_to_from_scss
 ) = $tsx_file
 
-rm -rf $tmpdir
+## Tests for extended extension support (.ts, .js) and new fallback (.tsx)
+
+set -g tmpdir2 (mktemp -d)
+
+@test "open .ts from .scss when .ts exists (no .res)" (
+    set -l bar_scss "$tmpdir2/bar.scss"
+    set -l bar_ts "$tmpdir2/bar.ts"
+    touch $bar_scss $bar_ts
+    set -gx ZED_FILE $bar_scss
+    set -e ZED_SELECTED_TEXT
+    swap_to_from_scss
+) = "$tmpdir2/bar.ts"
+
+@test "open .js from .scss when .js exists (no .res, .ts, .tsx)" (
+    set -l baz_scss "$tmpdir2/baz.scss"
+    set -l baz_js "$tmpdir2/baz.js"
+    touch $baz_scss $baz_js
+    set -gx ZED_FILE $baz_scss
+    set -e ZED_SELECTED_TEXT
+    swap_to_from_scss
+) = "$tmpdir2/baz.js"
+
+@test "fallback to .tsx when no corresponding files exist" (
+    set -l qux_scss "$tmpdir2/qux.scss"
+    touch $qux_scss
+    set -gx ZED_FILE $qux_scss
+    set -e ZED_SELECTED_TEXT
+    swap_to_from_scss
+) = "$tmpdir2/qux.tsx"
+
+rm -rf $tmpdir $tmpdir2
