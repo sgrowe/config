@@ -119,7 +119,7 @@ abbr jj_describe_rev_no_msg --regex "jds.*" --function _jj_describe_abbr_no_msg
 abbr jj_git --command jj --regex g -- git
 abbr jj_msg --command jj --regex -m --set-cursor -- "--message '%'"
 abbr jj_no_edit --command jj --regex -ne -- --no-edit
-abbr jj_limit --command jj --regex -l -- "--limit 5"
+abbr jj_limit --command jj --regex -l -- "--limit 10"
 abbr jj_no_whitespace --command jj --regex -w -- --ignore-all-space
 
 abbr mn "jj git fetch && jj rebase -d main"
