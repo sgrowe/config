@@ -1,6 +1,10 @@
 {
   "permissions": {
-    "allow": ["Bash(jj file list:*)"],
+    "allow": [
+      "Bash(jj file list:*)",
+      "Bash(gh run view:*)",
+      "WebFetch(domain:api.github.com)"
+    ],
     "deny": []
   }
 }
