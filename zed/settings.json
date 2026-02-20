@@ -50,8 +50,10 @@
     "enabled_in_text_threads": false,
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow",
+    },
     "default_profile": "write",
-    "always_allow_tool_actions": true,
     "dock": "right",
     "default_model": {
       "provider": "anthropic",
