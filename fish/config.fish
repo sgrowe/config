@@ -39,6 +39,12 @@ if status is-interactive
 
     # Prompt
     set -g lucid_prompt_symbol_error "!"
+
+    set -l _flash_messages (flash_message_show | string collect)
+    if test -n "$_flash_messages"
+        echo "Flash messages:"
+        echo $_flash_messages
+    end
 end
 
 # Be verbose
