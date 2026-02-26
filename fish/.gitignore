@@ -32,6 +32,8 @@
 !functions/_jj_squash_abbr.fish
 !functions/_jj_describe_abbr_no_msg.fish
 !functions/wt.fish
+!functions/flash_message.fish
+!functions/flash_message_show.fish
 
 # Tests
 !tests
