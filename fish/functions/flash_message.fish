@@ -20,6 +20,7 @@ function flash_message --description 'Save or clear fish flash messages'
     end
 
     mkdir -p $flash_messages_dir
-    set -l file_name (date '+%Y%m%d%H%M%S')"_"(random)".txt"
+    set -l file_name "$(date '+%Y%m%d%H%M%S')_$(random).txt"
     string join ' ' -- $argv >$flash_messages_dir/$file_name
+    return 0
 end

@@ -8,6 +8,8 @@ set -lx FLASH_MESSAGES_DIR $tmpdir
 @test "flash_message without args shows usage" (flash_message 2>&1) = "Usage: flash_message <message> | --clear"
 
 flash_message "Remember to send standup"
+@test "flash_message exits with status 0" $status = 0
+
 set -l files (find $tmpdir -type f | wc -l | string trim)
 @test "flash_message creates a file" $files = "1"
 
