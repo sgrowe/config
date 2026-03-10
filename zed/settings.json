@@ -65,8 +65,8 @@
     "metrics": false,
   },
 
-  // Vim
-  "vim_mode": true,
+  // Helix/Vim
+  "helix_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
     "use_system_clipboard": "on_yank",
