@@ -18,8 +18,8 @@ function wt --argument-names subcommand branch_name
         set revset $DEFAULT_WORKSPACE_REVSET
     end
     jj workspace add $workspace_path --revision $revset
-    and cd $workspace_path
     and if test -f ./post-clone.fish
-        env MAIN_WORKTREE_PATH=$main_worktree_path ./post-clone.fish
+        ./post-clone.fish $workspace_path
     end
+    and cd $workspace_path
 end
