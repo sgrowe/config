@@ -13,8 +13,9 @@ flash_message "Remember to send standup"
 set -l files (find $tmpdir -type f | wc -l | string trim)
 @test "flash_message creates a file" $files = "1"
 
-set -l shown (flash_message_show)
-@test "flash_message_show prints saved messages" "$shown" = "Remember to send standup"
+set -l shown (flash_message_show | string collect)
+set -l expected (printf 'Flash messages:\n\nRemember to send standup' | string collect)
+@test "flash_message_show prints saved messages" "$shown" = "$expected"
 
 flash_message --clear
 set -l remaining (find $tmpdir -type f | wc -l | string trim)
