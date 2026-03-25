@@ -125,8 +125,8 @@ abbr jj_no_edit --command jj --regex -ne -- --no-edit
 abbr jj_limit --command jj --regex -l -- "--limit 10"
 abbr jj_no_whitespace --command jj --regex -w -- --ignore-all-space
 
-abbr mn "jj git fetch && jj rebase -d main"
-abbr ma "jj git fetch && jj rebase -d master"
+abbr mn "jj git fetch && jj rebase -d 'trunk()'"
+abbr ma "jj git fetch && jj rebase -d 'trunk()'"
 
 # Expands `^` to the last argument of the most recent command
 # e.g.
