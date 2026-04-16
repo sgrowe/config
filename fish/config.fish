@@ -54,22 +54,24 @@ abbr conf "$EDIT ~/.config/fish/config.fish"
 abbr fconf "$EDIT ~/.config/fish"
 
 # JJ
-abbr j jj
-abbr ji jjui
+abbr j   jj
+abbr ji  jjui
 abbr js jj status
-abbr jsp jj split
-abbr ju jj undo
+abbr jsp jj split -r
+abbr ju  jj undo
 abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff -r @%"
-abbr jc --set-cursor "jj commit --message '%'"
+abbr jc  "jj commit"
 abbr jci "jj commit --interactive"
+abbr jcm --set-cursor "jj commit --message '%'"
 abbr jl   jj log
 abbr jla "jj log -r 'all()'"
 abbr jls  jj log --summary
-abbr je jj edit
-abbr ja jj absorb
+abbr je  jj edit
+abbr jev jj evolog
+abbr ja  jj absorb
 abbr jab jj abandon
 abbr jsh jj show
 abbr jb  jj bookmark
@@ -77,18 +79,18 @@ abbr jbl jj bookmark list
 abbr jbc jj bookmark create -r
 abbr jbm jj bookmark move
 abbr jba jj bookmark advance
-abbr bm jj bookmark move main --to @-
+abbr bm  jj bookmark move main --to @-
 abbr jbt jj bookmark track
 abbr jbf jj bookmark forget
 abbr jtug "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
-abbr jr jj rebase
+abbr jr  jj rebase
 abbr jjmerge jj resolve --tool mergiraf
-abbr jg jj git
+abbr jg  jj git
 abbr jgp jj git push
 abbr jgf jj git fetch # TODO: remove when used to `jf`
 abbr jgc jj git clone --colocate
-abbr jf jj git fetch
-abbr jw jj workspace
+abbr jf  jj git fetch
+abbr jw  jj workspace
 abbr jwu jj workspace update-stale
 abbr jsq jj squash
 abbr jsqi jj squash --into
