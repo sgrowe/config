@@ -93,14 +93,20 @@
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
-      "language_servers": ["tsgo", "vtsls"],
+      "language_servers": [
+        "tsgo",
+        // "vtsls"
+      ],
     },
     "TypeScript": {
       "format_on_save": "on",
       "code_actions_on_format": {
         "source.fixAll.eslint": true,
       },
-      "language_servers": ["tsgo", "vtsls"],
+      "language_servers": [
+        "tsgo",
+        // "vtsls"
+      ],
     },
     "ReScript": {
       "format_on_save": "on",
