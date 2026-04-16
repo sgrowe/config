@@ -321,7 +321,7 @@ abbr andr_paste adb shell input text
 abbr xcderiv cd ~/Library/Developer/Xcode/DerivedData
 
 # Project specific
-abbr ava "pnpm --dir app/server exec ava"
+abbr vy "pnpm --dir app/server exec test:watch"
 abbr ch "./scripts/check.sh"
 abbr zmt "jj rebase -r zmt --before @"
 
