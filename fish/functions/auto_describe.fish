@@ -2,11 +2,12 @@ function auto_describe
     # set -f qwen mlx-community/Qwen3-0.6B-8bit
     set -f qwen mlx-community/Qwen3-1.7B-4bit
     set -f mistral mistralai/Mistral-Small-3.2-24B-Instruct-2506
+    set -f gemma mlx-community/gemma-3-4b-it-qat-4bit
 
     # Use revision given in first argument, or default to `@`
     set -f rev $argv[1]
     if test -z "$rev"
-        set -f rev "@-"
+        set -f rev "@"
     end
 
     echo "Revision: $rev"
@@ -18,7 +19,7 @@ function auto_describe
 
     set -f diff "$(jj diff --ignore-space-change --git -r $change_id | string collect)"
 
-    set -f desc "$(mlx_lm.generate --verbose false --model $qwen --max-tokens 100000 --system-prompt "Provide a concise, one line commit message for this diff. Be specific. Respond with the commit message only." --prompt "$diff")"
+    set -f desc "$(mlx_lm.generate --verbose false --model $gemma --max-tokens 100000 --system-prompt "Provide a concise, one line commit message for this diff. Be specific. Respond with the commit message only." --prompt "$diff")"
 
     printf "\n\n%s\n\n" "$desc"
 
@@ -26,5 +27,5 @@ function auto_describe
 
     set -l fish_trace 1
 
-    jj describe -r "$change_id" -m "$desc" --edit
+    jj describe -r "$change_id" -m "$desc" --editor
 end
