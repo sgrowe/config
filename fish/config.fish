@@ -53,6 +53,8 @@ abbr cp 'cp -v'
 abbr conf "$EDIT ~/.config/fish/config.fish"
 abbr fconf "$EDIT ~/.config/fish"
 
+abbr s --set-cursor "./scripts/%"
+
 # JJ
 abbr j   jj
 abbr ji  jjui
@@ -319,11 +321,6 @@ abbr andr_paste adb shell input text
 
 # Xcode
 abbr xcderiv cd ~/Library/Developer/Xcode/DerivedData
-
-# Project specific
-abbr vy "pnpm --dir app/server exec test:watch"
-abbr ch "./scripts/check.sh"
-abbr zmt "jj rebase -r zmt --before @"
 
 # Add Google Cloud SDK to PATH
 if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]

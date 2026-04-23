@@ -3,7 +3,8 @@
     "allow": [
       "Bash(jj file list:*)",
       "Bash(gh run view:*)",
-      "WebFetch(domain:api.github.com)"
+      "WebFetch(domain:api.github.com)",
+      "WebSearch"
     ],
     "deny": []
   }
