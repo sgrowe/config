@@ -65,9 +65,8 @@ abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
 abbr jd --set-cursor "jj diff -r @%"
-abbr jc  "jj commit"
-abbr jci "jj commit --interactive"
-abbr jcm --set-cursor "jj commit --message '%'"
+abbr jc  --set-cursor "jj commit --message '%'"
+abbr jci --set-cursor "jj commit --interactive --message '%'"
 abbr jl   jj log
 abbr jla "jj log -r 'all()'"
 abbr jls  jj log --summary
