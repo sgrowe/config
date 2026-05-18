@@ -69,6 +69,7 @@ abbr jc  --set-cursor "jj commit --message '%'"
 abbr jci --set-cursor "jj commit --interactive --message '%'"
 abbr jl   jj log
 abbr jla "jj log -r 'all()'"
+abbr jlr --set-cursor "jj log -r '%'"
 abbr jls  jj log --summary
 abbr je  jj edit
 abbr jev jj evolog
@@ -88,9 +89,12 @@ abbr jr  jj rebase
 abbr jjmerge jj resolve --tool mergiraf
 abbr jg  jj git
 abbr jgp jj git push
-abbr jgf jj git fetch # TODO: remove when used to `jf`
+abbr jgf jj git fetch
 abbr jgc jj git clone --colocate
-abbr jf  jj git fetch
+abbr jf  jj file
+abbr jfa jj file annotate
+abbr jfu jj file untrack
+abbr jfs --set-cursor "jj file search --pattern '*%*' --revision 'trunk()'"
 abbr jw  jj workspace
 abbr jwu jj workspace update-stale
 abbr jsq jj squash
@@ -279,6 +283,12 @@ set -gx TURBO_TELEMETRY_DISABLED 1
 abbr cl claude
 set -gx DISABLE_TELEMETRY 1
 
+
+abbr sg ./scripts/gh-code-review.sh
+abbr qu  --set-cursor 'claude --permission-mode default "/sgrowe-ai:quick-review %"'
+abbr rai              'claude --permission-mode plan "/sgrowe-ai:resolve-ai-comments"'
+
+
 # Hurl
 abbr h hurl
 
@@ -310,6 +320,7 @@ abbr at auto_describe
 
 # Projects
 abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && make build && pnpm --dir app/client run re:build:raw:with-deps && make migrate && pnpm exec turbo tsc --filter=@humaans/client && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
+abbr zl --set-cursor "zellij --layout ~/work/monorepo/sam-tools/%"
 
 # iOS simulator
 # Open url in already booted simulator
