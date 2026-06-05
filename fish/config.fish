@@ -279,6 +279,11 @@ set -gx NEXT_TELEMETRY_DISABLED 1
 # Turbo
 set -gx TURBO_TELEMETRY_DISABLED 1
 
+
+# Chrome DevTools CLI - disable update notification
+set -gx CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS 1
+
+
 # Claude code
 abbr cl claude
 set -gx DISABLE_TELEMETRY 1

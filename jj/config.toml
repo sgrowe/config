@@ -5,8 +5,8 @@ email = "sgrowe@live.co.uk"
 [ui]
 default-command = [
     "log",
-    # "-r",
-    # "trunk() | (trunk():: & mine())"
+    "-r",
+    "trunk()::@"
 ]
 
 diff-editor = ":builtin"
