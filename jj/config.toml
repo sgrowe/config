@@ -34,6 +34,19 @@ bookmark-advance-to = '@-'
 log = "builtin_log_comfortable"
 git_push_bookmark = '"sgrowe/push-" ++ change_id.short()'
 
+# Show commit diff in description editor
+draft_commit_description = '''
+concat(
+  coalesce(description, "\n"),
+  "\nJJ: This commit contains the following changes:\n",
+  indent("JJ: ", diff.stat(120)),
+  "\nJJ: ignore-rest\n",
+  "```diff\n",
+  diff.git(),
+  "\n```\n",
+)
+'''
+
 [template-aliases]
 # Relative timestamp rendered as "x days/hours/seconds ago"
 'format_timestamp(timestamp)' = 'timestamp.ago()'
