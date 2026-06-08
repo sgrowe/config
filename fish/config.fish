@@ -324,7 +324,7 @@ abbr as aider-script
 abbr at auto_describe
 
 # Projects
-abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && make build && pnpm --dir app/client run re:build:raw:with-deps && make migrate && pnpm exec turbo tsc --filter=@humaans/client && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
+abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && pnpm install && pnpm exec turbo build tsc --filter=\"@humaans/*\" --force && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
 abbr zl --set-cursor "zellij --layout ~/work/monorepo/sam-tools/%"
 
 # iOS simulator
