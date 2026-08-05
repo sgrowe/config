@@ -89,6 +89,7 @@ abbr jr  jj rebase
 abbr jjmerge jj resolve --tool mergiraf
 abbr jg  jj git
 abbr jgp jj git push
+abbr jgn jj git push --named
 abbr jgf jj git fetch
 abbr jgc jj git clone --colocate
 abbr jf  jj file
