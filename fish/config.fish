@@ -46,7 +46,6 @@ end
 
 # Be verbose
 abbr mv 'mv -v'
-abbr rm 'rm -v'
 abbr cp 'cp -v'
 
 # fish
@@ -55,10 +54,13 @@ abbr fconf "$EDIT ~/.config/fish"
 
 abbr s --set-cursor "./scripts/%"
 
+# Jute
+abbr u jute
+
 # JJ
 abbr j   jj
 abbr ji  jjui
-abbr js jj status
+abbr js  jj status
 abbr jsp jj split -r
 abbr ju  jj undo
 abbr jn  jj new
@@ -81,10 +83,8 @@ abbr jbl jj bookmark list
 abbr jbc jj bookmark create -r
 abbr jbm jj bookmark move
 abbr jba jj bookmark advance
-abbr bm  jj bookmark move main --to @-
 abbr jbt jj bookmark track
 abbr jbf jj bookmark forget
-abbr jtug "jj bookmark move --from 'closest_bookmark(@-)' --to '@-'"
 abbr jr  jj rebase
 abbr jjmerge jj resolve --tool mergiraf
 abbr jg  jj git
@@ -263,11 +263,14 @@ abbr ya yarn add
 abbr yad yarn add --dev
 abbr yw yarn workspace
 
+# pi
+abbr p pi
+
 # pnpm
-abbr p pnpm
-abbr pr pnpm run
-abbr pe pnpm exec
-abbr pi pnpm install
+abbr pn pnpm
+abbr pnr pnpm run
+abbr pne pnpm exec
+abbr pni pnpm install
 
 # brew
 abbr b brew
