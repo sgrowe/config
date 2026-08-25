@@ -307,6 +307,8 @@ abbr ze zed
 # pgcli
 abbr pg pgcli
 
+abbr am automod
+
 # Aider
 abbr a aider
 abbr awd "aider (jj diff --name-only)" # Start aider with edited files loaded
