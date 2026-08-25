@@ -17,4 +17,4 @@
 
 ## Tests
 
-Run the tests with `fish -c 'fishtape ~/.config/fish/tests/*.fish'`
+After making changes run the tests with `jute test`

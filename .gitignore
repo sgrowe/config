@@ -33,3 +33,6 @@
 !/.github/**
 
 jj/repos/
+
+!.jute
+!.jute/**
