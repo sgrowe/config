@@ -72,7 +72,7 @@ abbr jci --set-cursor "jj commit --interactive --message '%'"
 abbr jl   jj log
 abbr jla "jj log -r 'all()'"
 abbr jlr --set-cursor "jj log -r '%'"
-abbr jls  jj log --summary
+abbr jls jj log --summary
 abbr je  jj edit
 abbr jev jj evolog
 abbr ja  jj absorb
@@ -87,11 +87,12 @@ abbr jbt jj bookmark track
 abbr jbf jj bookmark forget
 abbr jr  jj rebase
 abbr jjmerge jj resolve --tool mergiraf
-abbr jg  jj git
-abbr jgp jj git push
-abbr jgn jj git push --named
-abbr jgf jj git fetch
-abbr jgc jj git clone --colocate
+abbr jg   jj git
+abbr jgp  jj git push
+abbr jgpc jj git push -c
+abbr jgn  jj git push --named
+abbr jgf  jj git fetch
+abbr jgc  jj git clone --colocate
 abbr jf  jj file
 abbr jfa jj file annotate
 abbr jfu jj file untrack
@@ -134,8 +135,8 @@ abbr jj_no_edit --command jj --regex -ne -- --no-edit
 abbr jj_limit --command jj --regex -l -- "--limit 10"
 abbr jj_no_whitespace --command jj --regex -w -- --ignore-all-space
 
-abbr mn "jj git fetch && jj rebase -d 'trunk()' && jj simplify-parents"
-abbr ma "jj git fetch && jj rebase -d 'trunk()' && jj simplify-parents"
+abbr mn "jj git fetch && jj rebase -d 'trunk()' --simplify-parents"
+abbr ma "jj git fetch && jj rebase -d 'trunk()' --simplify-parents"
 
 # Expands `^` to the last argument of the most recent command
 # e.g.
@@ -311,7 +312,7 @@ abbr am automod         # fish/functions/automod.fish
 abbr at auto_describe   # fish/functions/auto_describe.fish
 
 # Projects
-abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && pnpm install && pnpm exec turbo build tsc --filter=\"@humaans/*\" --force && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
+abbr morn "jj git fetch && jj rebase -d 'trunk()' --simplify-parents && pnpm install && pnpm exec turbo build tsc --filter=\"@humaans/*\" --force && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
 abbr zl --set-cursor "zellij --layout ~/work/monorepo/sam-tools/%"
 
 # iOS simulator
