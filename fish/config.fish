@@ -55,7 +55,7 @@ abbr fconf "$EDIT ~/.config/fish"
 abbr s --set-cursor "./scripts/%"
 
 # Jute
-abbr u jute
+abbr ut jute
 
 # JJ
 abbr j   jj
@@ -307,8 +307,6 @@ abbr ze zed
 # pgcli
 abbr pg pgcli
 
-abbr am automod
-
 # Aider
 abbr a aider
 abbr awd "aider (jj diff --name-only)" # Start aider with edited files loaded
@@ -326,8 +324,8 @@ set -x AIDER_NOTIFICATIONS true
 # aider-script
 abbr as aider-script
 
-# auto_describe function
-abbr at auto_describe
+abbr am automod         # fish/functions/automod.fish
+abbr at auto_describe   # fish/functions/auto_describe.fish
 
 # Projects
 abbr morn "jj git fetch && jj rebase -d master && jj simplify-parents && pnpm install && pnpm exec turbo build tsc --filter=\"@humaans/*\" --force && make migrate && zellij --layout ~/work/monorepo/sam-tools/humaans.kdl"
