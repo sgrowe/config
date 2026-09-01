@@ -307,23 +307,6 @@ abbr ze zed
 # pgcli
 abbr pg pgcli
 
-# Aider
-abbr a aider
-abbr awd "aider (jj diff --name-only)" # Start aider with edited files loaded
-# abbr awd "aider (git status -s | awk '{print \$NF}')" # Start aider with edited files loaded
-abbr aw aider --watch-files
-abbr aider_read --command aider --regex r -- --read
-abbr aider_edit --command aider --regex e -- --edit
-abbr aider_msg_ --command aider --regex m -- --message
-abbr aider_msgf --command aider --regex mf -- --message-file
-abbr aider_test --command aider --regex t -- --test
-abbr aider_wtch --command aider --regex w -- --watch-files
-
-set -x AIDER_NOTIFICATIONS true
-
-# aider-script
-abbr as aider-script
-
 abbr am automod         # fish/functions/automod.fish
 abbr at auto_describe   # fish/functions/auto_describe.fish
 
