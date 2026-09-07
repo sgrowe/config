@@ -35,6 +35,7 @@
 !functions/flash_message.fish
 !functions/flash_message_show.fish
 !functions/automod.fish
+!functions/linear_review.fish
 
 # Tests
 !tests
