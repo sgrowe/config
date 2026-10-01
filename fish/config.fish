@@ -11,7 +11,7 @@ if status is-interactive
         set -x EDIT zed
     end
 
-    set -x EDITOR "$EDIT --wait"
+    set -x EDITOR "$EDIT --existing --wait"
 
     # fzf: https://junegunn.github.io/fzf/shell-integration/
     if command -q fzf
@@ -269,6 +269,7 @@ abbr p pi
 
 # pnpm
 abbr pn pnpm
+abbr pnx pnpm dlx
 abbr pnr pnpm run
 abbr pne pnpm exec
 abbr pni pnpm install
