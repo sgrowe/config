@@ -66,7 +66,8 @@ abbr ju  jj undo
 abbr jn  jj new
 abbr jna jj new --no-edit --after
 abbr jnb jj new --no-edit --before
-abbr jd --set-cursor "jj diff -r @%"
+abbr jd  --set-cursor "jj diff -r @%"
+abbr jdc --set-cursor "jj diff --tool ':color-words' -r @%"
 abbr jc  --set-cursor "jj commit --message '%'"
 abbr jci --set-cursor "jj commit --interactive --message '%'"
 abbr jl   jj log
@@ -99,13 +100,13 @@ abbr jfu jj file untrack
 abbr jfs --set-cursor "jj file search --pattern '*%*' --revision 'trunk()'"
 abbr jw  jj workspace
 abbr jwu jj workspace update-stale
-abbr jsq jj squash
-abbr jsqi jj squash --into
+abbr jsq  jj squash
+abbr jsqi jj squash --interactive
 
 # `jsq` behaves like `jm` but for `jj squash`. Examples:
 # `jsqol`  -> `jj squash --into ol`
 # `jsq-`   -> `jj squash --into @-`
-abbr jj_squash_into_rev --regex "jsq.*" --function _jj_squash_abbr
+abbr jj_squash_into_rev --regex "jsq[k-z]+" --function _jj_squash_abbr
 abbr zsq "jj diff --name-only | fzf --multi --preview 'jj diff --color always --git {1}' --keep-right | xargs jj squash"
 
 
@@ -215,6 +216,8 @@ abbr gsw "git branch | fzf --preview 'git log --color=always {-1}' --bind 'enter
 # Replaced with jj equivalent above ^
 # abbr mn "git switch main && git pull --autostash"
 
+# Linear
+abbr lnr linear_review
 
 # kubectl
 abbr k   kubectl
