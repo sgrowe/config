@@ -29,6 +29,7 @@
 !functions/fish_prompt.fish
 !functions/fish_jj_prompt.fish
 !functions/swap_to_from_scss.fish
+!functions/copy_selection_with_path.fish
 !functions/_jj_squash_abbr.fish
 !functions/_jj_describe_abbr_no_msg.fish
 !functions/wt.fish

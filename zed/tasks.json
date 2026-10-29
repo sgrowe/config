@@ -22,6 +22,13 @@
     "hide": "always"
   },
   {
+    "label": "Copy selection with path",
+    "command": "copy_selection_with_path",
+    "reveal": "never",
+    "hide": "always",
+    "allow_concurrent_runs": true
+  },
+  {
     "label": "Example task",
     "command": "for i in {1..5}; do echo \"Hello $i/5\"; sleep 1; done",
     //"args": [],

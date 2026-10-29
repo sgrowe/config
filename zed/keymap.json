@@ -38,6 +38,13 @@
     }
   },
   {
+    // full editors only, so cmd-alt-x still toggles regex in the search bar
+    "context": "Editor && mode == full",
+    "bindings": {
+      "cmd-alt-x": ["task::Spawn", { "task_name": "Copy selection with path" }]
+    }
+  },
+  {
     "context": "Pane",
     "bindings": {
       "ctrl-`": "workspace::ToggleBottomDock"

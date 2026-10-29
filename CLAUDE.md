@@ -17,4 +17,4 @@
 
 ## Tests
 
-After making changes run the tests with `jute test`
+After making changes run the tests with `./codex/test.fish`
